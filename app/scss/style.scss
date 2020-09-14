@@ -35,6 +35,10 @@
     color: white;
     @include osw500;
     font-size: 18px;
+    padding-bottom: 7px;
+}
+.header__menu-link--active{
+    border-bottom: 2px solid white;
 }
 .header__info{
     @include osw500;
@@ -72,7 +76,10 @@
 
     }
 }
-
+.header__links{
+    display: flex;
+    justify-content: space-between;
+}
 .header__button-link{
     padding: 20px 90px;
     color: white;
@@ -80,7 +87,43 @@
     font-size: 22px;
     text-transform: uppercase;
     @include osw700;
+    margin-top: 36px;
 }
-
+.header__questions{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 570px;
+    & :nth-child(1){
+        background-color: #fff;
+        color: $red;
+        @include osw700;
+        margin-bottom: 30px;
+    }
+    & :nth-child(4){
+        background-color: #fff;
+        color: $red;
+        @include osw700;
+    }
+    & :nth-child(even){
+        margin-left: 30px;
+    }
+    & :nth-child(2){
+        margin-bottom: 30px;
+    }
+}
+.header__questions-item{
+    min-width: 270px;
+    min-height: 130px;
+    background-color: $red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-transform: uppercase;
+    @include osw700;
+    font-size: 16px;
+}
 
 @import "media";
