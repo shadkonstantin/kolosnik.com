@@ -221,5 +221,31 @@
         }
     }
 }
+.info{
+    background-color: $red;
+}
+.info__wrapper{
+    padding-top: 80px;
+    padding-bottom: 80px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.info__item-title{
+    @include osw700;
+    font-size: 28px;
+    color: white;
+    margin-bottom: 20px;
+}
+.list__item{
+    display: block;
+    margin-bottom: 10px;
+    .list__link{
+        @include osw400;
+        font-size: 16px;
+        color: white;
+    }
+}
+
 
 @import "media";
