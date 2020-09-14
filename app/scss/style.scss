@@ -5,16 +5,6 @@
 
 
 //--------------- ETC START
-.sticky {
-    background-color: white;
-    color: $greydark !important;
-    border-bottom: 2px solid transparent;
-    position: sticky;
-    width: 100%;
-    top: 0;
-    z-index: 20;
-    transition: all .4s;
-}
 
 .font-dark {
     color: $greydark !important;
@@ -36,7 +26,7 @@
 }
 
 .rotate180 {
-    &::before{
+    &::before {
         transform: rotate(180deg);
     }
 }
@@ -66,8 +56,33 @@
 .header__top {
     display: flex;
     justify-content: space-between;
-    min-height: 123px;
     align-items: center;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
+    min-height: 125px;
+    transition: all .4s;
+    z-index: 20;
+
+    &--scroll {
+        background-color: #fff;
+
+        .header__menu-link {
+            color: $greylight;
+            @include osw700;
+        }
+
+        .header__info-link {
+            color: $greylight;
+            @include osw700;
+        }
+
+        .header__menu-link--active {
+            border-color: $greylight;
+        }
+    }
 }
 
 .header__menu-list {
@@ -78,8 +93,8 @@
 
 .header__menu-link {
     color: white;
-    @include osw500;
-    font-size: 18px;
+    @include osw700;
+    font-size: 16px;
     padding-bottom: 7px;
 }
 
@@ -88,7 +103,7 @@
 }
 
 .header__info {
-    @include osw500;
+    @include osw700;
     color: white;
     margin-right: 20px;
 
@@ -98,12 +113,12 @@
 
     &-link {
         color: inherit;
-        font-size: 18px;
+        font-size: 16px;
     }
 }
 
 .header__title {
-    margin-top: 92px;
+    padding-top: 240px;
 
     h1 {
         font-size: 72px;
@@ -119,7 +134,7 @@
 
     p {
         color: white;
-        font-size: 60px;
+        font-size: 56px;
         @include osw700;
         margin: 0;
 
@@ -139,7 +154,7 @@
     padding: 20px 90px;
     color: white;
     background-color: $red;
-    font-size: 22px;
+    font-size: 16px;
     text-transform: uppercase;
     @include osw700;
     margin-top: 36px;
@@ -184,7 +199,7 @@
     color: white;
     text-transform: uppercase;
     @include osw700;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .mouse {
@@ -216,7 +231,7 @@
 .product__title {
     margin-top: 60px;
     margin-bottom: 40px;
-    font-size: 50px;
+    font-size: 38px;
     @include osw700;
     color: $greydark;
     text-transform: uppercase;
@@ -237,7 +252,7 @@
     box-shadow: 10px 0px 15px rgba(0, 0, 0, 0.25), 0px 10px 15px rgba(0, 0, 0, 0.25);
 
     &-title {
-        font-size: 20px;
+        font-size: 18px;
         line-height: 30px;
         @include osw700;
         color: $greydark;
@@ -263,10 +278,10 @@
         a {
             color: $red;
             border: 2px solid $red;
-            font-size: 14px;
+            font-size: 12px;
             @include osw700;
             text-transform: uppercase;
-            padding: 13px 35px;
+            padding: 10px 20px;
             transition: all .3s;
 
             &:hover {
@@ -309,7 +324,7 @@
     margin-bottom: 10px;
 
     .list__link {
-        @include osw400;
+        @include osw500;
         font-size: 16px;
         color: white;
     }
@@ -326,6 +341,20 @@
     padding-bottom: 120px;
 }
 
+.faq__item {
+    &.active {
+        .faq__title {
+            .arrow-down::before {
+                transform: rotate(180deg);
+            }
+        }
+
+        .faq__answer {
+            display: block;
+        }
+    }
+}
+
 .faq__title {
     background: white;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
@@ -335,7 +364,8 @@
     color: $greydark;
     font-size: 16px;
     position: relative;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+
 }
 
 .faq__answer {
@@ -350,14 +380,47 @@
     text-align: left;
     display: none;
     margin-bottom: 20px;
-    &.active{
-        .faq__answer{
-           display: block; 
-        }
-    }
+
 }
 
 
 
 //--------------- FAQ END
+.callback {
+    background-color: $red;
+}
+
+.callback__wrapper {
+    padding: 50px;
+    position: relative;
+}
+
+.callback__title {
+    font-size: 22px;
+    @include osw500;
+    color: white;
+    max-width: 300px;
+    margin-bottom: 50px;
+}
+
+.callback__input {
+    display: block;
+    margin-bottom: 20px;
+    width: 370px;
+    min-height: 60px;
+    outline: none;
+    border: none;
+    padding: 0 20px;
+    font-size: 16px;
+    @include osw500;
+
+
+}
+
+.callback__img {
+    position: absolute;
+    bottom: 0;
+    right: 30px;
+}
+
 @import "media";
