@@ -5,7 +5,7 @@
 
 
 
-.header{
+.header {
     background-image: url('../img/bg.png');
     background-repeat: no-repeat;
     background-position: top;
@@ -13,11 +13,11 @@
     height: 100vh;
 }
 
-.header__logo{
+.header__logo {
     margin-left: 64px;
 }
 
-.header__top{
+.header__top {
     display: flex;
     justify-content: space-between;
     //padding-top: 20px;
@@ -25,37 +25,42 @@
     align-items: center;
 }
 
-.header__menu-list{
-    li+li{
+.header__menu-list {
+    li+li {
         margin-left: 40px;
     }
 }
 
-.header__menu-link{
+.header__menu-link {
     color: white;
     @include osw500;
     font-size: 18px;
     padding-bottom: 7px;
 }
-.header__menu-link--active{
+
+.header__menu-link--active {
     border-bottom: 2px solid white;
 }
-.header__info{
+
+.header__info {
     @include osw500;
     color: white;
     margin-right: 20px;
-    &-item+&-item{
+
+    &-item+&-item {
         margin-top: 5px;
     }
-    &-link{
+
+    &-link {
         color: inherit;
         font-size: 18px;
     }
 }
 
-.header__title{
+.header__title {
     margin-top: 92px;
-    h1{
+
+    h1 {
         font-size: 72px;
         color: white;
         @include osw700;
@@ -63,24 +68,29 @@
         margin: 0;
     }
 }
-.header__subtitle{
+
+.header__subtitle {
     max-width: 450px;
-    p{
+
+    p {
         color: white;
         font-size: 60px;
         @include osw700;
         margin: 0;
-        span{
+
+        span {
             color: $red;
         }
 
     }
 }
-.header__links{
+
+.header__links {
     display: flex;
     justify-content: space-between;
 }
-.header__button-link{
+
+.header__button-link {
     padding: 20px 90px;
     color: white;
     background-color: $red;
@@ -89,31 +99,37 @@
     @include osw700;
     margin-top: 36px;
 }
-.header__questions{
+
+.header__questions {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     width: 570px;
-    & :nth-child(1){
+
+    & :nth-child(1) {
         background-color: #fff;
         color: $red;
         @include osw700;
         margin-bottom: 30px;
     }
-    & :nth-child(4){
+
+    & :nth-child(4) {
         background-color: #fff;
         color: $red;
         @include osw700;
     }
-    & :nth-child(even){
+
+    & :nth-child(even) {
         margin-left: 30px;
     }
-    & :nth-child(2){
+
+    & :nth-child(2) {
         margin-bottom: 30px;
     }
 }
-.header__questions-item{
+
+.header__questions-item {
     min-width: 270px;
     min-height: 130px;
     background-color: $red;
@@ -124,6 +140,86 @@
     text-transform: uppercase;
     @include osw700;
     font-size: 16px;
+}
+
+.mouse {
+    width: 66px;
+    height: 110px;
+    border: 1px solid white;
+    margin: 50px auto;
+    border-radius: 50px;
+    position: relative;
+}
+
+.click {
+    width: 14px;
+    height: 14px;
+    background-color: #fff;
+    border-radius: 30px;
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.product__title {
+    margin-top: 60px;
+    margin-bottom: 40px;
+    font-size: 50px;
+    @include osw700;
+    color: $greydark;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.product__content {
+    padding-bottom: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product__item {
+    max-width: 370px;
+    padding: 20px;
+    background: #FFFFFF;
+    box-shadow: 10px 0px 15px rgba(0, 0, 0, 0.25), 0px 10px 15px rgba(0, 0, 0, 0.25);
+
+    &-title {
+        font-size: 20px;
+        line-height: 30px;
+        @include osw700;
+        color: $greydark;
+        margin-top: 25px;
+        margin-bottom: 15px;
+    }
+    &-footer{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+    &-subtitle{
+        @include osw700;
+        color: $greylight;
+        font-size: 12px;
+        text-transform: uppercase;
+    }
+    &-btn{
+        a{
+            color: $red;
+            border: 2px solid $red;
+            font-size: 14px;
+            @include osw700;
+            text-transform: uppercase;
+            padding: 13px 35px;
+            transition: all .3s;
+            &:hover{
+                background-color: $red;
+                color: white;
+            }
+        }
+    }
 }
 
 @import "media";
