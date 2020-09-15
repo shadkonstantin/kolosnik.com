@@ -121,6 +121,13 @@
 .header__title {
     padding-top: 240px;
 
+    h1 {
+        font-size: 72px;
+        color: white;
+        @include osw700;
+        text-transform: uppercase;
+        margin: 0;
+    }
 }
 
 .header__subtitle {
@@ -225,11 +232,6 @@
 .product__title {
     margin-top: 60px;
     margin-bottom: 40px;
-    font-size: 38px;
-    @include osw700;
-    color: $greydark;
-    text-transform: uppercase;
-    text-align: center;
 }
 
 .product__content {
@@ -381,6 +383,9 @@
 
 
 //--------------- FAQ END
+
+
+//--------------- CALLBACK START
 .callback {
     background-color: $red;
 }
@@ -432,7 +437,8 @@
     text-transform: uppercase;
     transition: all .5s;
     cursor: pointer;
-    &:hover{
+
+    &:hover {
         background-color: white;
         color: $red;
     }
@@ -448,8 +454,9 @@
     display: inline-flex;
     align-items: center;
     user-select: none;
-  }
-  .callback__checkbox+label::before {
+}
+
+.callback__checkbox+label::before {
     content: '';
     display: inline-block;
     width: 25px;
@@ -462,16 +469,16 @@
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 50% 50%;
-  }
+}
 
-  .callback__checkbox:checked+label::before {
+.callback__checkbox:checked+label::before {
     background-color: transparent;
     content: "\f00c";
     font-size: 14px;
     font-family: 'icomoon';
     border: 1px solid white;
     padding-top: 2px;
-  }
+}
 
 
 .callback__confidence {
@@ -497,5 +504,49 @@
     bottom: -4px;
     right: 0px;
 }
+
+//--------------- CALLBACK END
+
+
+
+
+//--------------- ADVANTAGES START
+.advantages__wrapper{
+    padding-bottom: 80px;
+}
+.advantages__title{
+    margin-top: 60px;
+    margin-bottom: 80px;
+}
+.advantages__content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.advantages__item{
+    text-align: center;
+    max-width: 270px;
+}
+.advantages__circle {
+    width: 270px;
+    height: 270px;
+    background-color: white;
+    //opacity: 0.6;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.advantages__subtitle{
+    @include osw700;
+    font-size: 18px;
+    color: $greydark;
+}
+//--------------- ADVANTAGES END
+
+
+
 
 @import "media";

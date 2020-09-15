@@ -49,11 +49,9 @@ button {
 }
 
 .title__section {
-    h1 {
-        font-size: 72px;
-        color: white;
-        @include osw700;
-        text-transform: uppercase;
-        margin: 0;
-    }
+    font-size: 38px;
+    @include osw700;
+    color: $greydark;
+    text-transform: uppercase;
+    text-align: center;
 }
