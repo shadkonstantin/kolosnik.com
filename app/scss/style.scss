@@ -159,6 +159,12 @@
     text-transform: uppercase;
     @include osw700;
     margin-top: 36px;
+    transition: all .4s;
+    &:hover{
+        background-color: white;
+        color: $red;
+
+    }
 }
 
 .header__questions {
@@ -167,18 +173,27 @@
     align-items: center;
     flex-wrap: wrap;
     width: 570px;
+    transition: all .4s;
 
     & :nth-child(1) {
         background-color: #fff;
         color: $red;
         @include osw700;
         margin-bottom: 30px;
+        &:hover{
+            background-color: $red;
+            color: white;
+        }
     }
 
     & :nth-child(4) {
         background-color: #fff;
         color: $red;
         @include osw700;
+        &:hover{
+            background-color: $red;
+            color: white;
+        }
     }
 
     & :nth-child(even) {
@@ -201,6 +216,11 @@
     text-transform: uppercase;
     @include osw700;
     font-size: 14px;
+    transition: all .4s;
+    &:hover{
+        background-color: #fff;
+        color: $red;
+    }
 }
 
 .mouse {
@@ -511,22 +531,26 @@
 
 
 //--------------- ADVANTAGES START
-.advantages__wrapper{
+.advantages__wrapper {
     padding-bottom: 80px;
 }
-.advantages__title{
+
+.advantages__title {
     margin-top: 60px;
     margin-bottom: 80px;
 }
-.advantages__content{
+
+.advantages__content {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.advantages__item{
+
+.advantages__item {
     text-align: center;
     max-width: 270px;
 }
+
 .advantages__circle {
     width: 270px;
     height: 270px;
@@ -539,13 +563,109 @@
     justify-content: center;
 }
 
-.advantages__subtitle{
+.advantages__subtitle {
     @include osw700;
     font-size: 18px;
     color: $greydark;
 }
+
 //--------------- ADVANTAGES END
 
+
+
+//--------------- FOOTER START
+
+.footer {
+    background-color: $red;
+}
+
+.footer__wrapper {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+.footer__top {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.footer__item-title {
+    font-size: 28px;
+    @include osw700;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.footer__list-item {
+    display: block;
+
+    +.footer__list-item {
+        margin-top: 20px;
+    }
+}
+
+.footer__list-link {
+    font-size: 16px;
+    @include osw700;
+    color: white;
+    line-height: 20px;
+}
+
+.footer__social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 35px;
+}
+
+.footer__social-icon {
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+    transition: all .4s;
+
+    +.footer__social-icon {
+        margin-left: 20px;
+    }
+}
+
+.icon-facebook-square {
+    &:hover {
+        color: #3b5998;
+    }
+}
+
+.icon-instagram {
+    &:hover {
+        color: #fcaf45;
+    }
+}
+
+.footer__contacts{
+    p{
+        font-size: 16px;
+        color: white;
+        @include osw700;
+    }
+}
+
+.footer__bottom{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 55px;
+}
+.footer__bottom-text{
+    @include osw700;
+    font-size: 16px;
+    color: white;
+    max-width: 400px;
+    text-align: center;
+    line-height: 30px;
+}
+
+//--------------- FOOTER END
 
 
 
