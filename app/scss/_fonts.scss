@@ -48,6 +48,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-check:before {
+  content: "\f00c";
+}
 .icon-caret-down:before {
   content: "\f0d7";
 }

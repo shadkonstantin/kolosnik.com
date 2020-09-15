@@ -68,6 +68,7 @@
 
     &--scroll {
         background-color: #fff;
+        border-bottom: 2px solid rgba($color: $greylight, $alpha: 0.5);
 
         .header__menu-link {
             color: $greylight;
@@ -120,13 +121,6 @@
 .header__title {
     padding-top: 240px;
 
-    h1 {
-        font-size: 72px;
-        color: white;
-        @include osw700;
-        text-transform: uppercase;
-        margin: 0;
-    }
 }
 
 .header__subtitle {
@@ -365,6 +359,7 @@
     font-size: 16px;
     position: relative;
     margin-bottom: 10px;
+    cursor: pointer;
 
 }
 
@@ -399,28 +394,108 @@
     font-size: 22px;
     @include osw500;
     color: white;
-    max-width: 300px;
+    max-width: 400px;
     margin-bottom: 50px;
+    line-height: 33px;
+}
+
+.callback__info {
+    max-width: 400px;
+
 }
 
 .callback__input {
     display: block;
     margin-bottom: 20px;
-    width: 370px;
+    width: 400px;
     min-height: 60px;
     outline: none;
     border: none;
     padding: 0 20px;
     font-size: 16px;
     @include osw500;
+    text-align: center;
+    color: $greylight;
+}
+
+.callback__form {
+    text-align: center;
+}
+
+.callback-btn {
+    border: 2px solid white;
+    color: white;
+    padding: 15px 60px;
+    font-size: 14px;
+    @include osw700;
+    background-color: transparent;
+    text-transform: uppercase;
+    transition: all .5s;
+    cursor: pointer;
+    &:hover{
+        background-color: white;
+        color: $red;
+    }
+}
+
+.callback__checkbox {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.callback__checkbox+label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+  }
+  .callback__checkbox+label::before {
+    content: '';
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 1px solid white;
+    border-radius: 0.25em;
+    margin-right: 0.5em;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+  }
+
+  .callback__checkbox:checked+label::before {
+    background-color: transparent;
+    content: "\f00c";
+    font-size: 14px;
+    font-family: 'icomoon';
+    border: 1px solid white;
+    padding-top: 2px;
+  }
 
 
+.callback__confidence {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.callback__confidence-text {
+    @include osw500;
+    font-size: 14px;
+    color: white;
+    display: inline;
+    margin-left: 30px;
+    line-height: 20px;
+    text-align: center;
 }
 
 .callback__img {
     position: absolute;
-    bottom: 0;
-    right: 30px;
+    bottom: -4px;
+    right: 0px;
 }
 
 @import "media";
