@@ -48,21 +48,38 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-th:before {
+  content: "\f00a";
+}
+
+.icon-th-list:before {
+  content: "\f00b";
+}
+
 .icon-check:before {
   content: "\f00c";
 }
-.icon-facebook-square:before {
-  content: "\f082";
-}
+
 .icon-phone:before {
   content: "\f095";
 }
+
+.icon-facebook:before {
+  content: "\f09a";
+}
+
+.icon-facebook-f:before {
+  content: "\f09a";
+}
+
 .icon-caret-down:before {
   content: "\f0d7";
 }
+
 .icon-envelope:before {
   content: "\f0e0";
 }
+
 .icon-instagram:before {
   content: "\f16d";
 }
