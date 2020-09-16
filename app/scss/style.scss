@@ -70,7 +70,7 @@
 .header__info-icon{
     display: none;
 }
-.header__top {
+.header__top, .header-page__top {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -126,7 +126,7 @@
     border-bottom: 2px solid white;
 }
 
-.header__info {
+.header__info, .header__pageInfo {
     @include osw700;
     color: white;
     margin-right: 20px;
@@ -699,6 +699,53 @@
 }
 
 //--------------- FOOTER END
+
+//---------------------------------------------------------------- INDEX PAGE END----------------------------------------------------------//
+
+
+
+
+
+
+//---------------------------------------------------------------- NASTIL PAGE START----------------------------------------------------------//
+
+
+.header__pageInfo-icon{
+    display: none;
+}
+
+.header-page__top{
+    background-color: #fff;
+}
+
+.header__pageMenu-link {
+    color: $red;
+    @include osw700;
+    font-size: 16px;
+    padding-bottom: 7px;
+}
+
+.header__pageMenu-link--active {
+    border-bottom: 2px solid $red;
+}
+
+.header__pageMenu-list {
+    li+li {
+        margin-left: 40px;
+    }
+}
+
+.header-page__top{
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+}
+
+.header__pageInfo{
+    color: $red;
+}
+
+//---------------------------------------------------------------- NASTIL PAGE END----------------------------------------------------------//
+
+
 
 
 
