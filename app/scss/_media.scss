@@ -64,7 +64,17 @@
     }
 
 }
+@media(max-width:1250px){
+    .advantages__content{
+        flex-wrap: wrap;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+    .advantages__item{
+        margin: 15px;
 
+    }
+}
 @media(max-width:1200px) {
     .container {
         max-width: 940px;
@@ -104,6 +114,11 @@
     .product__content {
         align-items: stretch;
     }
+    .callback__img{
+        img{
+            width: 480px;
+        }
+    }
 }
 
 @media(max-width:965px) {
@@ -142,6 +157,32 @@
     .product__item-title {
         text-align: center;
     }
+    .footer__top{
+        flex-wrap: wrap;
+        max-width: 500px;
+        justify-content: flex-start;
+    }
+    .footer__item{
+        margin-left: 40px;
+        margin-top: 25px;
+    }
+    .footer__social{
+        justify-content: flex-start;
+    }
+    .footer__bottom{
+        margin-left: 20px;
+        flex-wrap: wrap;
+        max-width: 500px;
+        justify-content: flex-start;
+        &-text{
+            margin-bottom: 20px;
+        }
+        &-logo{
+            img{
+                width: 200px;
+            }
+        }
+    }
 }
 
 @media(max-width:830px) {
@@ -170,12 +211,18 @@
     .header__links {
         margin-left: 65px;
     }
+    .callback__img{
+        display: none;
+    }
+    .callback__info{
+        margin: 0 auto;
+    }
 }
 
 @media(max-width:740px) {
     .info__wrapper {
         flex-wrap: wrap;
-        justify-content: flex-start;
+        //justify-content: flex-start;
     }
 
     .info__item {
@@ -184,7 +231,11 @@
         margin-top: 15px;
     }
 }
-
+@media(max-width:630px){
+    .advantages__content{
+        justify-content: center;
+    }
+}
 @media(max-width:615px) {
     .header__logo {
         margin-left: 15px;
@@ -263,6 +314,31 @@
     .icon-envelope {
         padding-bottom: 8px;
     }
+    .callback__title{
+        max-width: 300px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+    .callback__form{
+        form{
+            text-align: center; 
+        }
+        
+    }
+    .callback__input{
+        width: 300px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+}
+
+@media(max-width:470px){
+    .callback__input{
+        width: 250px;
+    }
+    .callback__title{
+        max-width: 250px;
+    }
 }
 
 @media(max-width:410px) {
@@ -277,11 +353,20 @@
             font-size: 34px;
         }
     }
+    .callback__input{
+        width: 200px;
+    }
+    .callback__title{
+        max-width: 200px;
+    }
 }
 
 @media(max-width:370px) {
     .header__logo-img {
         width: 140px;
+    }
+    .faq__title{
+        padding-right: 45px;
     }
 }
 
