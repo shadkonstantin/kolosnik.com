@@ -61,12 +61,15 @@
     background-position: top;
     background-size: cover;
     height: 100vh;
+    position: relative;
 }
 
 .header__logo {
     margin-left: 64px;
 }
-
+.header__info-icon{
+    display: none;
+}
 .header__top {
     display: flex;
     justify-content: space-between;
@@ -134,6 +137,7 @@
         font-size: 16px;
     }
 }
+
 
 .header__title {
     padding-top: 240px;
@@ -239,12 +243,17 @@
         color: $red;
     }
 }
-
+.scroll{
+    position: absolute;
+    bottom: 40px;
+    margin: 0 auto;
+    left: 50%;
+    right: 50%;
+}
 .mouse {
     width: 66px;
     height: 110px;
     border: 1px solid white;
-    margin: 50px auto;
     border-radius: 50px;
     position: relative;
 }

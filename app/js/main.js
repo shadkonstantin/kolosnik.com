@@ -23,4 +23,9 @@ $(function () {
         $(".header__menu ul").slideToggle();
       });
 
+    
+    $(".header__info-icon").on("click", function() {
+        $(".header__top .header__info").slideToggle();
+      });
+
 });
