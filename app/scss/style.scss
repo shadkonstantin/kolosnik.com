@@ -67,10 +67,13 @@
 .header__logo {
     margin-left: 64px;
 }
-.header__info-icon{
+
+.header__info-icon {
     display: none;
 }
-.header__top, .header-page__top {
+
+.header__top,
+.header-page__top {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -100,10 +103,12 @@
         .header__menu-link--active {
             border-color: $greylight;
         }
-        .menu-btn__row{
+
+        .menu-btn__row {
             background-color: $greylight;
         }
-        .icon-envelope{
+
+        .icon-envelope {
             color: $greylight;
         }
     }
@@ -126,7 +131,8 @@
     border-bottom: 2px solid white;
 }
 
-.header__info, .header__pageInfo {
+.header__info,
+.header__pageInfo {
     @include osw700;
     color: white;
     margin-right: 20px;
@@ -184,7 +190,8 @@
     @include osw700;
     margin-top: 36px;
     transition: all .4s;
-    &:hover{
+
+    &:hover {
         background-color: white;
         color: $red;
 
@@ -204,7 +211,8 @@
         color: $red;
         @include osw700;
         margin-bottom: 30px;
-        &:hover{
+
+        &:hover {
             background-color: $red;
             color: white;
         }
@@ -214,7 +222,8 @@
         background-color: #fff;
         color: $red;
         @include osw700;
-        &:hover{
+
+        &:hover {
             background-color: $red;
             color: white;
         }
@@ -241,18 +250,21 @@
     @include osw700;
     font-size: 14px;
     transition: all .4s;
-    &:hover{
+
+    &:hover {
         background-color: #fff;
         color: $red;
     }
 }
-.scroll{
+
+.scroll {
     position: absolute;
     bottom: 40px;
     margin: 0 auto;
     left: 50%;
     right: 50%;
 }
+
 .mouse {
     width: 66px;
     height: 110px;
@@ -290,7 +302,7 @@
     align-items: center;
 }
 
-.product__image{
+.product__image {
     text-align: center;
 }
 
@@ -675,21 +687,22 @@
     }
 }
 
-.footer__contacts{
-    p{
+.footer__contacts {
+    p {
         font-size: 16px;
         color: white;
         @include osw700;
     }
 }
 
-.footer__bottom{
+.footer__bottom {
     display: flex;
     justify-content: space-around;
     align-items: center;
     margin-top: 55px;
 }
-.footer__bottom-text{
+
+.footer__bottom-text {
     @include osw700;
     font-size: 16px;
     color: white;
@@ -709,12 +722,12 @@
 
 //---------------------------------------------------------------- NASTIL PAGE START----------------------------------------------------------//
 
-
-.header__pageInfo-icon{
+//----------HEADER START
+.header__pageInfo-icon {
     display: none;
 }
 
-.header-page__top{
+.header-page__top {
     background-color: #fff;
 }
 
@@ -735,13 +748,299 @@
     }
 }
 
-.header-page__top{
+.header-page__top {
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
 }
 
-.header__pageInfo{
+.header__pageInfo {
     color: $red;
 }
+
+//--------HEADER END
+
+
+//--------breadcrumbs START
+
+.breadcrumbs {
+    padding-top: 155px;
+    // .breadcrumbs__list
+
+    &__list {
+        li {
+            a {
+                font-size: 18px;
+                color: $greyblond;
+                @include osw500;
+                margin-right: 10px;
+
+                &::after {
+                    content: "—";
+                    padding-left: 15px;
+                }
+            }
+
+            span {
+                font-size: 18px;
+                color: $greyblond;
+                @include osw500;
+            }
+        }
+    }
+}
+
+//----------breadcrumbs END
+
+.page__title {
+    font-size: 24px;
+    @include osw700;
+    color: $greydark;
+    text-transform: uppercase;
+    margin-bottom: 45px;
+    margin-top: 30px;
+}
+
+.page-inner {
+    display: flex;
+}
+
+.aside-links {
+    margin-right: 30px;
+}
+
+.aside-links__item {
+    background: white;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+    max-width: 270px;
+    padding: 20px;
+    @include osw700;
+    position: relative;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.aside__link {
+    color: $greydark;
+    font-size: 18px;
+}
+
+
+.page-content {
+
+    // .page-content__option
+
+    &__option {
+        width: 870px;
+        height: 40px;
+        margin-bottom: 10px;
+        background: #FFFFFF;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+    }
+}
+
+.goods {
+
+    // .goods__wrapper
+
+    &__wrapper {
+        max-width: 870px;
+        padding-bottom: 60px;
+
+        /* прячем стандартный чекбокс */
+        input[type="checkbox"] {
+            display: none;
+        }
+
+        /* стили для метки */
+        input[type="checkbox"]+label {
+            cursor: pointer;
+            padding-left: 50px;
+            position: relative;
+            font-family: tahoma, sans-serif, arial;
+            line-height: 40px;
+        }
+
+        /* стили для поля с бегунком*/
+        input[type="checkbox"]+label::before {
+            content: "";
+            display: inline-block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            vertical-align: middle;
+            padding: 0;
+            height: 24px;
+            width: 50px;
+            margin: 0 5px 0 0;
+            border: 1px solid transparent;
+            border-radius: 12px;
+            background: $red;
+        }
+
+        /* стили для бегунка*/
+        input[type="checkbox"]+label::after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 1px;
+            left: 1px;
+            width: 22px;
+            height: 22px;
+            border-radius: 22px;
+            background: #fff;
+            border: 1px solid #dadada;
+            box-shadow: 0 3px 3px rgba(140, 140, 140, .1);
+        }
+
+        /* плавность )) */
+        input[type="checkbox"]+label::before,
+        input[type="checkbox"]+label::after {
+            -webkit-transition: all .2s ease-out;
+            transition: all .2s ease-out;
+        }
+
+        /* чекнутое состояние )) */
+        input[type="checkbox"]:checked+label::before {
+            background: #56A531;
+            border-color: #56A531;
+        }
+
+        input[type="checkbox"]:checked+label::after {
+            left: 28px;
+        }
+
+        input[type="text"] {
+            width: 90px;
+            border: none;
+            background-color: $red;
+            color: white;
+            font-size: 14px;
+            text-align: center;
+            padding: 5px 10px;
+            margin-left: 10px;
+        }
+    }
+
+    // .goods__item
+
+    &__item {
+        width: 870px;
+        min-height: 130px;
+        background: #FFFFFF;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 20px;
+
+        +.goods__item {
+            margin-top: 20px;
+        }
+    }
+
+    // .goods__item-icon
+
+    &__item-icon {
+        margin-right: 55px;
+    }
+
+    // .goods__item-wrapper
+
+    &__item-wrapper {}
+
+    // .goods__item-title
+
+    &__item-title {
+        font-size: 18px;
+        @include osw700;
+        color: $greydark;
+        letter-spacing: 1.5px;
+        line-height: 27px;
+    }
+
+    // .goods__item-box
+
+    &__item-box {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-around;
+    }
+
+    // .goods__item-properties
+
+    &__item-properties {
+        font-size: 14px;
+        line-height: 18px;
+        @include osw700;
+        color: $greydark;
+
+        span {
+            color: $red;
+            margin-left: 4px;
+        }
+    }
+
+    // .goods__item-zn
+
+    &__item-zn {
+        font-size: 14px;
+        line-height: 18px;
+        @include osw700;
+        color: $greydark;
+        margin-left: 20px;
+    }
+
+    // .goods__item-buttons
+
+    &__item-buttons {
+        margin-left: 170px;
+        text-align: center;
+    }
+
+    // .goods__item-price
+
+    &__item-price {
+        font-size: 14px;
+        @include osw500;
+        color: $greydark;
+        margin-bottom: 10px;
+    }
+
+    // .goods__item-btn
+
+    &__item-btn {
+        padding: 12px 30px;
+        background-color: $red;
+        color: white;
+        @include osw700;
+        font-size: 11px;
+        border: 2px solid transparent;
+        transition: all .4s;
+        text-transform: uppercase;
+
+        &:hover {
+            background-color: white;
+            color: $red;
+            border: 2px solid $red;
+        }
+    }
+
+    &__message {
+        margin: 40px auto;
+        font-size: 16px;
+        @include osw700;
+        color: $greydark;
+        text-align: center;
+
+    }
+}
+
+#goods__item--custom {
+    .goods__item-buttons {
+        margin-left: 120px;
+    }
+}
+
+
 
 //---------------------------------------------------------------- NASTIL PAGE END----------------------------------------------------------//
 
