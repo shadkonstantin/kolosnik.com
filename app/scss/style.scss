@@ -103,6 +103,9 @@
         .menu-btn__row{
             background-color: $greylight;
         }
+        .icon-envelope{
+            color: $greylight;
+        }
     }
 }
 
@@ -285,6 +288,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.product__image{
+    text-align: center;
 }
 
 .product__item {
