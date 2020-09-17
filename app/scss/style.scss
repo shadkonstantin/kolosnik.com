@@ -675,7 +675,7 @@
     }
 }
 
-.icon-facebook-square {
+.icon-facebook-f {
     &:hover {
         color: #3b5998;
     }
@@ -781,7 +781,7 @@
 
             span {
                 font-size: 18px;
-                color: $greyblond;
+                color: $greylight;
                 @include osw500;
             }
         }
@@ -789,6 +789,74 @@
 }
 
 //----------breadcrumbs END
+
+.page-wrapper {
+    .container {
+        .faq__wrapper {
+            padding-top: 50px;
+
+            .faq__item {
+
+
+                .faq__title,
+                .faq__answer {
+                    max-width: 1170px;
+                    color: $greydark;
+                    text-align-last: left;
+                    line-height: 30px;
+
+                    span {
+                        color: $red;
+                    }
+                }
+
+                .answer__img {
+                    margin-top: 35px;
+                    margin-bottom: 35px;
+                    display: flex;
+                    align-items: center;
+
+                    ul {
+                        margin-left: 60px;
+
+                        li {
+                            display: block;
+
+                            p {
+                                font-size: 14px;
+
+                                span {
+                                    color: $red;
+                                    font-size: 16px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .answer-img__wrapper {
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: stretch;
+
+                    .answer-img__item {
+                        max-width: 300px;
+
+                        img {
+                            width: 300px;
+                        }
+
+                        p {
+                            text-align: center !important;
+                            text-align-last: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
 
 .page__title {
     font-size: 24px;
@@ -801,6 +869,7 @@
 
 .page-inner {
     display: flex;
+    justify-content: space-between;
 }
 
 .aside-links {
@@ -810,7 +879,8 @@
 .aside-links__item {
     background: white;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
-    max-width: 270px;
+    width: 270px;
+
     padding: 20px;
     @include osw700;
     position: relative;
@@ -851,8 +921,9 @@
             }
 
         }
-
     }
+
+
 }
 
 .goods {
@@ -1175,7 +1246,155 @@
 
 //---------------------------------------------------------------- NASTIL PAGE END----------------------------------------------------------//
 
+//----------------------------------------------------------------STUPEN PAGE START -------------------------------------------------------//
+.page-wrapper.page-wrapper--stupen {
+    .goods__item-buttons {
+        margin-left: 30px;
+    }
 
+    .goods__item-icon {
+        margin-right: 25px;
+    }
+}
+
+.goods__item-size {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-left: 20px;
+
+    p {
+        font-size: 16px;
+        @include osw500;
+        color: $greydark;
+    }
+}
+
+.size-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+
+    div+div {
+        margin-left: 10px;
+    }
+}
+
+.size-box__legth,
+.size-box__width {
+    text-align: center;
+
+    p {
+        font-size: 14px;
+        @include osw500;
+        color: $greydark;
+    }
+}
+
+//------------------------- СТИЛИЗУЕМ ГАБАРИТЫ У СТУПЕНЕЙ ----------------------------//
+
+.jq-selectbox__trigger {
+    border-left: none;
+}
+
+.jq-selectbox__trigger-arrow {
+    position: absolute;
+    top: 14px;
+    right: 12px;
+    width: 0;
+    height: 0;
+    border-top: 7px solid $red;
+    border-right: 7px solid transparent;
+    border-left: 7px solid transparent;
+}
+
+.jq-selectbox__select {
+    height: 40px;
+    padding: 0 30px 0 10px;
+    border: none;
+    border-bottom-color: transparent;
+    border-bottom-color: transparent;
+    border-radius: 0px;
+    background: none;
+    background: none;
+    background: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    color: $red;
+    text-shadow: none;
+    @include osw700;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.jq-selectbox__select-text {
+    width: 40px !important;
+}
+
+.jq-selectbox li:hover {
+    background-color: $red;
+    color: #FFF;
+    font-size: 18px;
+    @include osw700;
+}
+
+.jq-selectbox__dropdown {
+    ul {
+        li {
+            @include osw700;
+            width: 100%;
+        }
+    }
+}
+
+.jq-selectbox__select:hover {
+    background: none;
+}
+
+.jq-selectbox li.selected {
+    background-color: $greylight;
+    color: #FFF;
+}
+
+.size-box div+div {
+    margin-left: 0px;
+}
+
+.jq-selectbox:hover .jq-selectbox__trigger-arrow {
+    border-top-color: $greydark;
+}
+
+//------------------------- КОНЕЦ СТИЛИЗУЕМ ГАБАРИТЫ У СТУПЕНЕЙ ----------------------------//
+
+.goods__wrapper.grid {
+    .goods__item {
+        align-items: center;
+
+        &-icon {
+            margin-right: 0;
+        }
+    }
+
+    .goods__item-size {
+        margin-left: 0;
+    }
+
+    .goods__item-buttons {
+        margin-left: 0px;
+        margin-top: 10px;
+    }
+}
+
+
+
+
+
+
+//----------------------------------------------------------------STUPEN PAGE END----------------------------------------------------------//
 
 
 

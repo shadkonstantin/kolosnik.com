@@ -41,4 +41,6 @@ $(function () {
         $('.option-list').removeClass('active');
     });
 
+    $('select').styler();
+
 });
