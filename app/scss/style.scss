@@ -1247,7 +1247,31 @@
 //---------------------------------------------------------------- NASTIL PAGE END----------------------------------------------------------//
 
 //----------------------------------------------------------------STUPEN PAGE START -------------------------------------------------------//
-.page-wrapper.page-wrapper--stupen {
+.page-wrapper.page-wrapper--stupen,
+.page-wrapper.page-wrapper--krepezh {
+
+    .goods__wrapper.grid {
+        align-items: stretch;
+
+        .goods__item {
+            align-items: center;
+            justify-content: space-between;
+
+            &-icon {
+                margin-right: 0;
+            }
+        }
+
+        .goods__item-size {
+            margin-left: 0;
+        }
+
+        .goods__item-buttons {
+            margin-left: 0px;
+            margin-top: 10px;
+        }
+    }
+
     .goods__item-buttons {
         margin-left: 30px;
     }
@@ -1370,32 +1394,41 @@
 
 //------------------------- КОНЕЦ СТИЛИЗУЕМ ГАБАРИТЫ У СТУПЕНЕЙ ----------------------------//
 
-.goods__wrapper.grid {
-    .goods__item {
-        align-items: center;
-
-        &-icon {
-            margin-right: 0;
-        }
-    }
-
-    .goods__item-size {
-        margin-left: 0;
-    }
-
-    .goods__item-buttons {
-        margin-left: 0px;
-        margin-top: 10px;
-    }
-}
-
-
-
-
 
 
 //----------------------------------------------------------------STUPEN PAGE END----------------------------------------------------------//
 
 
+
+
+//----------------------------------------------------------------KREPEZH PAGE START----------------------------------------------------------//
+
+.page-wrapper.page-wrapper--krepezh {
+    .goods__item-box {
+        justify-content: flex-start;
+    }
+
+    .goods__item {
+        justify-content: space-around;
+
+        &-icon {
+            img {
+                width: 200px;
+            }
+        }
+    }
+
+    .goods__wrapper.grid {
+        .goods__item-wrapper {
+            width: auto;
+        }
+    }
+
+    .goods__item-wrapper {
+        width: 260px;
+    }
+}
+
+//----------------------------------------------------------------KREPEZH PAGE END----------------------------------------------------------//
 
 @import "media";
