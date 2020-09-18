@@ -30,7 +30,8 @@
           <li class="header__menu-item"><a href="" class="header__menu-link">Производство</a></li>
           <li class="header__menu-item"><a href="" class="header__menu-link header__menu-link--active">Фотогалерея</a>
           </li>
-          <li class="header__menu-item"><a href="" class="header__menu-link">Проектировщикам</a></li>
+          <li class="header__menu-item"><a href="./product.html" class="header__menu-link">Продукция</a></li>
+          <li class="header__menu-item"><a href="./info.html" class="header__menu-link">Проектировщикам</a></li>
           <li class="header__menu-item"><a href="" class="header__menu-link">О компании</a></li>
           <li class="header__menu-item"><a href="" class="header__menu-link">Контакты</a></li>
           <li class="header__menu-item"><a href="" class="header__menu-link">Вакансии</a></li>
@@ -44,6 +45,7 @@
         <div class="header__info-item"><a class="header__info-link" href="#">kolosnik@kolosnik.com</a></div>
         <div class="header__info-item"><a class="header__info-link" href="#">+7 (343) 321 20 49</a></div>
         <div class="header__info-item"><a class="header__info-link" href="#">г.Екатеринбург, ул.Монтажников,4</a></div>
+        <div class="header__info-item"><a class="header__info-link" href="#">ПН-ПТ с 8:00 до 16:30</a></div>
 
       </div>
     </div>
@@ -59,7 +61,7 @@
         </div>
         <div class="header__links">
           <div class="header__button">
-            <a class="header__button-link" href="#">заказать</a>
+            <a class="header__button-link" href=".popup__wrapper">заказать</a>
           </div>
           <div class="header__questions">
             <a href="#" class="header__questions-item">какой срок изготовления?</a>
@@ -406,6 +408,35 @@
     </div>
   </footer>
   <!-- FOOTER END -->
+
+
+  <!-- POPUP START -->
+  <div class="popup__wrapper mfp-hide">
+    <div class="popup__title">
+      заказать продукт
+    </div>
+    <div class="popup__inner">
+      <form action="" class="popup__form">
+        <input type="text" placeholder="Ваше имя" name="name">
+        <input type="text" placeholder="Ваш телефон">
+        <input type="text" placeholder="ваш e-mail">
+        <select name="" id="product" aria-placeholder="Продукт">
+          <option value="Сварной решетчатый настил">Сварной решетчатый настил 30*3</option>
+          <option value="Сварной решетчатый настил">Сварной решетчатый настил 30*2</option>
+          <option value="Сварной решетчатый настил">Сварной решетчатый настил 40*3</option>
+          <option value="Сварной решетчатый настил">Сварной решетчатый настил 40*4</option>
+          <option value="Ступени из сварного настила">Ступени из сварного настила</option>
+        </select>
+        <div class="popup__politika">
+          <input type="checkbox" name="" id="popup__checkbox" checked>
+          <p>отправляя данное сообщение, я соглашаюсь на обработку моих персональных данных</p>
+        </div>
+        <button class="popup__btn">заказать</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- POPUP END -->
 
 
 

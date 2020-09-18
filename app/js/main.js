@@ -74,7 +74,17 @@ $(function () {
 
         );
 
-        $('select').styler();
+        $('select[class="stupen__select"]').styler();
+        $('select[id="product"]').styler();
+        $('input[id="popup__checkbox"]').styler();
+
+
+
+
+        $('.header__button-link').magnificPopup({
+            type: "inline"
+        });
+
 
     }
 

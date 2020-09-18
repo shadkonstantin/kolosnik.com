@@ -34,11 +34,174 @@
 //--------------- ETC END
 
 
+//----------------POPUP START
+.popup__wrapper {
+    max-width: 1000px;
+    height: 700px;
+    width: 100%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background-color: #fff;
+    // background: linear-gradient(242.02deg, #FFE8E8 15.89%, #FFFFFF 67.35%);
+    // box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .popup__title {
+        margin-bottom: 40px;
+        @include osw700;
+        color: $red;
+        font-size: 20px;
+        text-transform: uppercase;
+    }
+
+    .mfp-close {
+        right: 450px;
+    }
+}
+
+.popup__inner {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    width: 100%;
+
+    .popup__form {
+        text-align: center;
+
+        input {
+            display: block;
+            width: 100%;
+            height: 40px;
+            text-align: center;
+            @include osw700;
+            font-size: 12px;
+            color: $red;
+            background-color: transparent;
+            border: 2px solid $red;
+            text-transform: uppercase;
+
+            +input {
+                margin-top: 30px;
+
+            }
+        }
+
+        .popup__btn {
+            background-color: $red;
+            border: none;
+            color: white;
+            padding: 0px 40px;
+            line-height: 40px;
+            font-size: 12px;
+            text-transform: uppercase;
+            @include osw700;
+            margin-top: 15px;
+            border: 2px solid transparent;
+            cursor: pointer;
+
+            &:hover {
+                background-color: transparent;
+                border: 2px solid $red;
+                color: $red;
+            }
+        }
+
+    }
+
+    .jq-selectbox.jqselect {
+        margin-top: 30px;
+        max-width: 500px;
+        width: 100%;
+    }
+
+    .jq-selectbox li {
+        width: 100%;
+        @include osw700;
+        font-size: 14px;
+    }
+
+    .jq-selectbox li:hover {
+        background-color: $red;
+        color: #FFF;
+    }
+
+    .jq-selectbox li.selected {
+        background-color: $greylight;
+        color: #FFF;
+    }
+
+    .jq-selectbox__select {
+        height: 40px;
+        padding: 0 45px 0 40px;
+        border: 2px solid $red;
+        border-bottom-color: $red;
+        border-radius: 0px;
+        background: transparent;
+        background: transparent;
+        background: transparent;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        color: $red;
+        text-shadow: none;
+        @include osw700;
+        text-transform: uppercase;
+        font-size: 12px;
+    }
+
+    .jq-selectbox__trigger {
+        border-left: none;
+    }
+
+    .jq-selectbox__trigger-arrow {
+        top: 16px;
+        right: 12px;
+        border-top: 5px solid $red;
+        border-right: 5px solid transparent;
+        border-left: 5px solid transparent;
+    }
+
+    .jq-selectbox li {
+        min-height: 18px;
+        padding: 5px 10px 6px;
+        color: $greydark;
+        font-size: 13px;
+    }
+}
+
+.popup__politika {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    input {
+        max-width: 50px;
+    }
+
+    p {
+        @include osw500;
+        color: $red;
+        font-size: 12px;
+    }
+}
+
+//----------------POPUP END
 
 
 
+//---------------------product page start
+
+.page-wrapper--product {
+    .product__content {
+        display: flex;
+    }
+}
 
 
+//---------------------product page END
 
 //--------------- HEADER START
 .header__menu-btn {
@@ -1317,79 +1480,82 @@
 }
 
 //------------------------- СТИЛИЗУЕМ ГАБАРИТЫ У СТУПЕНЕЙ ----------------------------//
+.page-wrapper--stupen {
 
-.jq-selectbox__trigger {
-    border-left: none;
-}
 
-.jq-selectbox__trigger-arrow {
-    position: absolute;
-    top: 14px;
-    right: 12px;
-    width: 0;
-    height: 0;
-    border-top: 7px solid $red;
-    border-right: 7px solid transparent;
-    border-left: 7px solid transparent;
-}
+    .jq-selectbox__trigger {
+        border-left: none;
+    }
 
-.jq-selectbox__select {
-    height: 40px;
-    padding: 0 30px 0 10px;
-    border: none;
-    border-bottom-color: transparent;
-    border-bottom-color: transparent;
-    border-radius: 0px;
-    background: none;
-    background: none;
-    background: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    color: $red;
-    text-shadow: none;
-    @include osw700;
-    font-size: 18px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    .jq-selectbox__trigger-arrow {
+        position: absolute;
+        top: 14px;
+        right: 12px;
+        width: 0;
+        height: 0;
+        border-top: 7px solid $red;
+        border-right: 7px solid transparent;
+        border-left: 7px solid transparent;
+    }
 
-}
+    .jq-selectbox__select {
+        height: 40px;
+        padding: 0 30px 0 10px;
+        border: none;
+        border-bottom-color: transparent;
+        border-bottom-color: transparent;
+        border-radius: 0px;
+        background: none;
+        background: none;
+        background: none;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        color: $red;
+        text-shadow: none;
+        @include osw700;
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
-.jq-selectbox__select-text {
-    width: 40px !important;
-}
+    }
 
-.jq-selectbox li:hover {
-    background-color: $red;
-    color: #FFF;
-    font-size: 18px;
-    @include osw700;
-}
+    .jq-selectbox__select-text {
+        width: 40px !important;
+    }
 
-.jq-selectbox__dropdown {
-    ul {
-        li {
-            @include osw700;
-            width: 100%;
+    .jq-selectbox li:hover {
+        background-color: $red;
+        color: #FFF;
+        font-size: 18px;
+        @include osw700;
+    }
+
+    .jq-selectbox__dropdown {
+        ul {
+            li {
+                @include osw700;
+                width: 100%;
+            }
         }
     }
-}
 
-.jq-selectbox__select:hover {
-    background: none;
-}
+    .jq-selectbox__select:hover {
+        background: none;
+    }
 
-.jq-selectbox li.selected {
-    background-color: $greylight;
-    color: #FFF;
-}
+    .jq-selectbox li.selected {
+        background-color: $greylight;
+        color: #FFF;
+    }
 
-.size-box div+div {
-    margin-left: 0px;
-}
+    .size-box div+div {
+        margin-left: 0px;
+    }
 
-.jq-selectbox:hover .jq-selectbox__trigger-arrow {
-    border-top-color: $greydark;
+    .jq-selectbox:hover .jq-selectbox__trigger-arrow {
+        border-top-color: $greydark;
+    }
 }
 
 //------------------------- КОНЕЦ СТИЛИЗУЕМ ГАБАРИТЫ У СТУПЕНЕЙ ----------------------------//
@@ -1531,6 +1697,15 @@
             margin-top: 0;
         }
     }
+}
+
+.white-popup {
+    position: relative;
+    background: #FFF;
+    padding: 20px;
+    width: auto;
+    max-width: 500px;
+    margin: 20px auto;
 }
 
 @import "media";
