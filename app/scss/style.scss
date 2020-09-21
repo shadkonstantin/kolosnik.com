@@ -83,6 +83,11 @@
             background-color: transparent;
             border: 2px solid $red;
             text-transform: uppercase;
+            outline: none;
+
+            &::placeholder {
+                color: $red;
+            }
 
             +input {
                 margin-top: 30px;
@@ -187,6 +192,41 @@
         font-size: 12px;
     }
 }
+
+#popup__product {
+    .popup__box-count {
+        margin-top: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        max-width: 200px;
+        margin: 25px auto 10px;
+    }
+
+    .popup-count__inner {
+        display: flex;
+        align-items: center;
+        @include osw700;
+        font-size: 14px;
+        color: $greydark;
+        line-height: 18px;
+
+        & p {
+            color: $red;
+            margin-left: 10px;
+        }
+    }
+
+    #goods__title-count {
+        @include osw700;
+        font-size: 16px;
+        color: $greydark;
+        text-align: center;
+    }
+}
+
+
 
 //----------------POPUP END
 
