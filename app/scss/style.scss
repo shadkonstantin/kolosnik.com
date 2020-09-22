@@ -37,14 +37,12 @@
 //----------------POPUP START
 .popup__wrapper {
     max-width: 1000px;
-    height: 700px;
+    height: auto;
     width: 100%;
     left: 0;
     right: 0;
     margin: 0 auto;
     background-color: #fff;
-    // background: linear-gradient(242.02deg, #FFE8E8 15.89%, #FFFFFF 67.35%);
-    // box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -194,8 +192,9 @@
 }
 
 #popup__product {
+    padding: 40px;
+
     .popup__box-count {
-        margin-top: 25px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -1497,7 +1496,8 @@
     }
 }
 
-.size-box {
+.size-box,
+.size-box__popup {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1508,7 +1508,16 @@
     }
 }
 
-.size-box__legth,
+.size-box__popup {
+    margin-left: 0;
+
+    #length_text,
+    #width_text {
+        font-size: 20px;
+    }
+}
+
+.size-box__length,
 .size-box__width {
     text-align: center;
 
