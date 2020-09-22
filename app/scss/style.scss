@@ -36,7 +36,7 @@
 
 //----------------POPUP START
 .popup__wrapper {
-    max-width: 1000px;
+    max-width: 800px;
     height: auto;
     width: 100%;
     left: 0;
@@ -47,6 +47,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
 
     .popup__title {
         margin-bottom: 40px;
@@ -57,7 +59,8 @@
     }
 
     .mfp-close {
-        right: 450px;
+        right: 550px;
+        top: 20px;
     }
 }
 
@@ -69,6 +72,25 @@
 
     .popup__form {
         text-align: center;
+
+        .popup__message {
+            width: 100%;
+            margin-top: 30px;
+            border: 2px solid $red;
+            outline: none;
+            @include osw500;
+            color: $red;
+            font-size: 14px;
+            text-align: center;
+            resize: none;
+            padding: 10px 15px;
+            min-height: 80px;
+            vertical-align: middle;
+
+            &::placeholder {
+                color: $red;
+            }
+        }
 
         input {
             display: block;
@@ -172,6 +194,7 @@
         padding: 5px 10px 6px;
         color: $greydark;
         font-size: 13px;
+
     }
 }
 
@@ -225,6 +248,9 @@
     }
 }
 
+.jq-selectbox__select-text {
+    line-height: 40px;
+}
 
 
 //----------------POPUP END
