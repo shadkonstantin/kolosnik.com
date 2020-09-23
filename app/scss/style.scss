@@ -274,6 +274,22 @@
         color: $red;
         border-color: $red;
     }
+
+    .menu-btn__row {
+        background-color: $red;
+    }
+
+    .header__info {
+        color: $red;
+
+        &-link {
+            color: $red;
+        }
+    }
+
+    .header__info-icon {
+        color: $red;
+    }
 }
 
 //---------------------product page END
@@ -310,8 +326,7 @@
     display: none;
 }
 
-.header__top,
-.header-page__top {
+.header__top {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -369,8 +384,7 @@
     border-bottom: 2px solid white;
 }
 
-.header__info,
-.header__pageInfo {
+.header__info {
     @include osw700;
     color: white;
     margin-right: 20px;
@@ -1191,7 +1205,8 @@
 
 
         .option-grid.icon-th,
-        .option-list.icon-th-list {
+        .option-list.icon-th-list,
+        .option-filter.icon-filter {
             font-size: 22px;
             color: $greydark;
             margin-left: 10px;
@@ -1199,6 +1214,27 @@
             &.active {
                 color: $red;
             }
+
+        }
+
+        .option-left {
+            margin-right: auto;
+            margin-left: 20px;
+            align-items: center;
+            display: flex;
+
+
+        }
+
+        .option-filter {
+            display: none;
+        }
+
+        .option-description {
+            @include osw500;
+            font-size: 14px;
+            color: $greydark;
+            margin-left: 10px;
 
         }
     }

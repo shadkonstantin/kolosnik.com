@@ -50,6 +50,11 @@ $(function () {
     $(".header__top .header__info").slideToggle();
   });
 
+  $(".option-filter").on("click", function () {
+    $(".page-aside").toggleClass('page-aside--toggle');
+  });
+
+
   $(".option-list").on("click", function () {
     $(".goods__wrapper").removeClass("grid");
     $(this).addClass("active");
@@ -169,5 +174,34 @@ $(function () {
 });
 
 
+$(document).ready(function () {
+  function checkWidth() {
+    var windowWidth = $('body').innerWidth(),
+      iconList = $('.option-list');
+    nastil = $(".goods__wrapper");
+    stupen = $("#goods__wrapper--stupen");
+    krepezh = $("#goods-wrapper--krepezh");
 
-//ЗАЯВКИ НА ПОЧТУ
+
+    // лучше сохранять объект в переменную, многократно чтобы не насиловать 
+    // страницу для поиска нужного элемента
+    if (windowWidth < 650) {
+      nastil.removeClass('list');
+      nastil.addClass('grid');
+    }
+    if (windowWidth < 850) {
+      stupen.removeClass('list');
+      stupen.addClass('grid');
+      iconList.addClass('display-none');
+    }
+    if (windowWidth >= 850) {
+      iconList.removeClass('display-none')
+    }
+  }
+
+  checkWidth(); // проверит при загрузке страницы
+
+  $(window).resize(function () {
+    checkWidth(); // проверит при изменении размера окна клиента
+  });
+});
