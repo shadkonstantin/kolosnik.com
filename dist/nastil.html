@@ -24,22 +24,18 @@
               <div class="pageMenu-btn__row"></div>
               <div class="pageMenu-btn__row"></div>
             </div>
-            <ul class="header__pageMenu-list">
-              <li class="header__pageMenu-item"><a href="./index.html"
-                  class="header__pageMenu-link header__pageMenu-link--active">Главная</a>
+            <ul class="header__menu-list">
+              <li class="header__menu-item"><a href="./index.html" class="header__menu-link">Главная</a>
               </li>
-              <li class="header__pageMenu-item"><a href="./proizvodstvo.html"
-                  class="header__pageMenu-link">Производство</a></li>
-              <li class="header__pageMenu-item"><a href=""
-                  class="header__pageMenu-link header__pageMenu-link--active">Фотогалерея</a>
+              <li class="header__menu-item"><a href="./proizvodstvo.html" class="header__menu-link">Производство</a>
               </li>
-              <li class="header__pageMenu-item"><a href="./product.html" class="header__pageMenu-link">Продукция</a>
+              <li class="header__menu-item"><a href="#" class="header__menu-link">Фотогалерея</a></li>
+              <li class="header__menu-item"><a href="./product.html" class="header__menu-link">Продукция</a></li>
+              <li class="header__menu-item"><a href="./info.html" class="header__menu-link">Проектировщикам</a>
               </li>
-              <li class="header__pageMenu-item"><a href="./info.html" class="header__pageMenu-link">Проектировщикам</a>
-              </li>
-              <li class="header__pageMenu-item"><a href="" class="header__pageMenu-link">О компании</a></li>
-              <li class="header__pageMenu-item"><a href="" class="header__pageMenu-link">Контакты</a></li>
-              <li class="header__pageMenu-item"><a href="" class="header__pageMenu-link">Вакансии</a></li>
+              <li class="header__menu-item"><a href="#" class="header__menu-link">О компании</a></li>
+              <li class="header__menu-item"><a href="#" class="header__menu-link">Контакты</a></li>
+              <li class="header__menu-item"><a href="#" class="header__menu-link">Вакансии</a></li>
             </ul>
           </nav>
           <div class="header__pageInfo-icon">
@@ -414,7 +410,19 @@
                 <li class="footer__list-item"><a href="#" class="footer__list-link">Работа в нашей компании</a></li>
               </ul>
             </div>
+
             <div class="footer__item">
+              <div class="footer__item-btn">
+                <div class="footer__item-tel">
+                  <a href="#">+7 (343) 321-20-49</a>
+                  <a class="footer__item-button" href=".popup__callback">заказать звонок</a>
+                </div>
+              </div>
+              <div class="footer__contacts">
+                <a href="#">kolosnik@kolosnik.com</a>
+                <p>г.Екатеринбург, ул.Монтажников,4</p>
+                <p>График работы: ПН-ПТ с 8:00 до 16:30</p>
+              </div>
               <div class="footer__item-title">
                 Мы в социальных сетях
               </div>
@@ -424,30 +432,40 @@
                 </div>
                 <div class="footer__social-icon icon-instagram"></div>
               </div>
-              <div class="footer__item-title">
-                Контакты
-              </div>
-              <div class="footer__contacts">
-                <p>+7 (343) 321 20 49</p>
-                <p>+7 (343) 321 20 49</p>
-                <p>+7 (343) 321 20 49</p>
-                <p>kolosnik@kolosnik.com</p>
-              </div>
             </div>
           </div>
           <div class="footer__bottom">
+            <div class="footer__bottom-logo">
+              <img src="./img/footer-logo.png" alt="">
+            </div>
             <div class="footer__bottom-text">
               г.Екатеринбург, ул.Монтажников,4 <br>
               ОАО «КОЛОСНИК» - 2019. ВСЕ ПРАВА ЗАЩИЩЕНЫ
             </div>
-            <div class="footer__bottom-logo">
-              <img src="./img/footer-logo.png" alt="">
-            </div>
+
           </div>
         </div>
       </div>
     </footer>
     <!-- FOOTER END -->
+    <!-- POPUP START -->
+    <div class="popup__callback mfp-hide">
+      <div class="popup__title">
+        заказать звонок
+      </div>
+      <div class="popup__inner">
+        <form action="mail_callback.php" class="popup__form" method="POST">
+          <input type="text" placeholder="Ваше имя" name="name">
+          <input type="text" placeholder="Ваш телефон" name="phone">
+          <div class="popup__politika">
+            <input type="checkbox" name="" id="popup__checkbox" checked>
+            <p>отправляя данное сообщение, я соглашаюсь на обработку моих персональных данных</p>
+          </div>
+          <button class="popup__btn" type="submit">заказать</button>
+        </form>
+      </div>
+    </div>
+    <!-- POPUP END -->
   </div>
   <!-- wrapper END -->
 
@@ -468,19 +486,20 @@
           <p id="goods__title-count" name="product"></p>
           <div class="polosa-box popup-count__inner">
             несущая полоса
-            <p id="polosa_text" name="polosa"></p>
+            <p id="polosa_text" name="polosa_text"></p>
+
           </div>
           <div class="cell-box popup-count__inner">
             ячейка
-            <p id="cell_text" name="cell"></p>
+            <p id="cell_text" name="cell_text"></p>
           </div>
           <div class="prutok-box popup-count__inner">
             связующий пруток
-            <p id="prutok_text" name="prutok"></p>
+            <p id="prutok_text" name="prutok_text"></p>
           </div>
           <div class="checkbox-box popup-count__inner">
             горячее цинкование
-            <p id="checkbox_text" name="zn"></p>
+            <p id="checkbox_text"></p>
           </div>
 
         </div>
@@ -491,6 +510,11 @@
           <p>отправляя данное сообщение, я соглашаюсь на обработку моих персональных данных</p>
         </div>
         <button class="popup__btn" type="submit">заказать</button>
+        <input type="hidden" name="goods__title--input" id="goods__title--input">
+        <input type="hidden" name="polosa_text--input" id="polosa_text--input">
+        <input type="hidden" name="cell_text--input" id="cell_text--input">
+        <input type="hidden" name="prutok_text--input" id="prutok_text--input">
+        <input type="hidden" name="zn_text--input" id="zn_text--input">
       </form>
     </div>
   </div>

@@ -25,16 +25,14 @@
           <div class="menu-btn__row"></div>
         </div>
         <ul class="header__menu-list">
-          <li class="header__menu-item"><a href="" class="header__menu-link header__menu-link--active">Главная</a>
-          </li>
-          <li class="header__menu-item"><a href="" class="header__menu-link">Производство</a></li>
-          <li class="header__menu-item"><a href="" class="header__menu-link header__menu-link--active">Фотогалерея</a>
-          </li>
+          <li class="header__menu-item"><a href="./index.html" class="header__menu-link">Главная</a></li>
+          <li class="header__menu-item"><a href="#" class="header__menu-link">Производство</a></li>
+          <li class="header__menu-item"><a href="#" class="header__menu-link ">Фотогалерея</a></li>
           <li class="header__menu-item"><a href="./product.html" class="header__menu-link">Продукция</a></li>
-          <li class="header__menu-item"><a href="./info.html" class="header__menu-link">Проектировщикам</a></li>
-          <li class="header__menu-item"><a href="" class="header__menu-link">О компании</a></li>
-          <li class="header__menu-item"><a href="" class="header__menu-link">Контакты</a></li>
-          <li class="header__menu-item"><a href="" class="header__menu-link">Вакансии</a></li>
+          <li class="header__menu-item"><a href="#" class="header__menu-link">Проектировщикам</a></li>
+          <li class="header__menu-item"><a href="#" class="header__menu-link">О компании</a></li>
+          <li class="header__menu-item"><a href="#" class="header__menu-link">Контакты</a></li>
+          <li class="header__menu-item"><a href="#" class="header__menu-link">Вакансии</a></li>
         </ul>
       </nav>
       <div class="header__info-icon">
@@ -277,10 +275,10 @@
             Оставьте свой номер и мы перезвоним Вам!
           </div>
           <div class="callback__form">
-            <form action="">
-              <input class="callback__input" type="text" placeholder="Ваше имя">
-              <input class="callback__input" type="text" placeholder="+79009007060">
-              <button class="callback-btn">Отправить</button>
+            <form action="mail_callback.php" method="POST" class="ajax-contact-form">
+              <input class="callback__input" type="text" placeholder="Ваше имя" name="name">
+              <input class="callback__input" type="text" placeholder="+79009007060" name="phone">
+              <button class="callback-btn" type="submit">Отправить</button>
             </form>
           </div>
           <div class="callback__confidence">
@@ -374,7 +372,19 @@
               <li class="footer__list-item"><a href="#" class="footer__list-link">Работа в нашей компании</a></li>
             </ul>
           </div>
+
           <div class="footer__item">
+            <div class="footer__item-btn">
+              <div class="footer__item-tel">
+                <a href="#">+7 (343) 321-20-49</a>
+                <a class="footer__item-button" href=".popup__callback">заказать звонок</a>
+              </div>
+            </div>
+            <div class="footer__contacts">
+              <a href="#">kolosnik@kolosnik.com</a>
+              <p>г.Екатеринбург, ул.Монтажников,4</p>
+              <p>График работы: ПН-ПТ с 8:00 до 16:30</p>
+            </div>
             <div class="footer__item-title">
               Мы в социальных сетях
             </div>
@@ -384,30 +394,42 @@
               </div>
               <div class="footer__social-icon icon-instagram"></div>
             </div>
-            <div class="footer__item-title">
-              Контакты
-            </div>
-            <div class="footer__contacts">
-              <p>+7 (343) 321 20 49</p>
-              <p>+7 (343) 321 20 49</p>
-              <p>+7 (343) 321 20 49</p>
-              <p>kolosnik@kolosnik.com</p>
-            </div>
           </div>
         </div>
         <div class="footer__bottom">
+          <div class="footer__bottom-logo">
+            <img src="./img/footer-logo.png" alt="">
+          </div>
           <div class="footer__bottom-text">
             г.Екатеринбург, ул.Монтажников,4 <br>
             ОАО «КОЛОСНИК» - 2019. ВСЕ ПРАВА ЗАЩИЩЕНЫ
           </div>
-          <div class="footer__bottom-logo">
-            <img src="./img/footer-logo.png" alt="">
-          </div>
+
         </div>
       </div>
     </div>
   </footer>
   <!-- FOOTER END -->
+  <!-- POPUP START -->
+  <div class="popup__callback mfp-hide">
+    <div class="popup__title">
+      заказать звонок
+    </div>
+    <div class="popup__inner">
+      <form action="mail_callback.php" class="popup__form ajax-contact-form" method="POST">
+        <input type="text" placeholder="Ваше имя" name="name">
+        <input type="text" placeholder="Ваш телефон" name="phone">
+        <div class="popup__politika">
+          <input type="checkbox" name="" id="popup__checkbox" checked>
+          <p>отправляя данное сообщение, я соглашаюсь на обработку моих персональных данных</p>
+        </div>
+        <button class="popup__btn" type="submit">заказать</button>
+      </form>
+    </div>
+  </div>
+  <!-- POPUP END -->
+
+
 
 
   <!-- POPUP START -->
@@ -439,9 +461,11 @@
   <!-- POPUP END -->
 
 
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="js/libs.min.js"></script>
   <script src="js/main.js"></script>
+
 </body>
 
 </html>

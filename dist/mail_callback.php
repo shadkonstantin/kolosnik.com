@@ -6,13 +6,7 @@ $mail->CharSet = 'utf-8';
 
 $name = $_POST['name'];
 $phone = $_POST['phone'];
-$email = $_POST['email'];
-$product = $_POST['goods__title--input'];
-$polosa = $_POST['polosa_text--input'];
-$cell = $_POST['cell_text--input'];
-$prutok = $_POST['prutok_text--input'];
-$zn = $_POST['zn_text--input'];
-$message = $_POST['message'];
+
 
 
 //$mail->SMTPDebug = 3;                               // Enable verbose debug output
@@ -35,16 +29,9 @@ $mail->addAddress('shadkonstantin@yandex.ru');     // Кому будет ухо
 //$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
 $mail->isHTML(true);                                  // Set email format to HTML
 
-$mail->Subject = 'Заявка с сайта www.kolosnik.com';
+$mail->Subject = 'Клиент не может дозвониться. Перезвонить!';
 $mail->Body    = "<strong>ФИО отправителя:</strong> $name <br>
-<strong>Электронный адрес отправителя:</strong> $email <br>
-<strong>Телефон отправителя:</strong> $phone <br>
-<strong>Продукт:</strong> $product <br>
-<strong>Несущая полоса:</strong> $polosa <br>
-<strong>Ячейка:</strong> $cell <br>
-<strong>Связующий пруток:</strong> $prutok <br>
-<strong>Горячее цинкование:</strong> $zn <br>
-<strong>Сообщение:</strong> $message <br>";
+<strong>Телефон отправителя:</strong> $phone <br>";
 $mail->AltBody = '';
 
 if (!$mail->send()) {

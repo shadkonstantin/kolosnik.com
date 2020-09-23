@@ -86,6 +86,9 @@ gulp.task('export', function () {
   let buildHtml = gulp.src('app/**/*.html')
     .pipe(gulp.dest('dist'));
 
+  let buildphp = gulp.src('app/**/*.php')
+    .pipe(gulp.dest('dist'));
+
   let BuildCss = gulp.src('app/css/**/*.css')
     .pipe(gulp.dest('dist/css'));
 

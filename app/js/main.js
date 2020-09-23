@@ -21,6 +21,27 @@ $(function () {
     });
   }
 
+  const menulinks = document.querySelectorAll(".header__menu-link");
+  for (let link of menulinks) {
+    link.addEventListener("click", () => {
+      for (let link of menulinks) {
+        link.classList.remove('header__menu-link--active');
+      }
+      link.classList.add('header__menu-link--active');
+    });
+  };
+
+
+  $(document).ready(function () {
+    $('.header__menu-list .header__menu-item .header__menu-link').each(function () {
+      var location = window.location.href;
+      var link = this.href;
+      if (location == link) {
+        $(this).addClass('header__menu-link--active');
+      }
+    });
+  });
+
   $(".header__menu-btn").on("click", function () {
     $(".header__menu ul").slideToggle();
   });
@@ -65,6 +86,10 @@ $(function () {
     type: "inline",
   });
 
+  $(".footer__item-button").magnificPopup({
+    type: "inline",
+  });
+
   const polosaText = document.getElementById("polosa_text");
   const cellText = document.getElementById("cell_text");
   const prutokText = document.getElementById("prutok_text");
@@ -72,6 +97,17 @@ $(function () {
   const title = document.getElementById("goods__title-count");
   const length_text = document.getElementById("length_text");
   const width_text = document.getElementById("width_text");
+
+  const goodsTitle = document.getElementById("goods__title--input");
+  const polosaTextInput = document.getElementById("polosa_text--input");
+  const cellTextInput = document.getElementById("cell_text--input");
+  const prutokTextInput = document.getElementById("prutok_text--input");
+  const znTextInput = document.getElementById("zn_text--input");
+
+
+  const lengthTextInput = document.getElementById("length_text--input");
+  const widthTextInput = document.getElementById("width_text--input");
+
 
   const buttonsProduct = document.querySelectorAll(".goods__item-btn");
 
@@ -85,10 +121,12 @@ $(function () {
     title.innerHTML = currentActive.parentElement.parentElement.querySelector(
       ".goods__item-title"
     ).textContent;
+    goodsTitle.value = title.textContent;
 
     polosaText.innerHTML = currentActive.parentElement.parentElement.querySelector(
       ".polosa"
     ).textContent;
+
     cellText.innerHTML = currentActive.parentElement.parentElement.querySelector(
       ".cell"
     ).textContent;
@@ -105,6 +143,15 @@ $(function () {
     } else {
       checkbox.innerHTML = "нет";
     }
+
+    goodsTitle.value = title.textContent;
+    polosaTextInput.value = polosaText.textContent;
+    cellTextInput.value = cellText.textContent;
+    prutokTextInput.value = prutokText.textContent;
+    znTextInput.value = checkbox.textContent;
+
+
+
     const length = currentActive.parentElement.parentElement.querySelector(
       ".stupen__select-length"
     ).firstChild.value;
@@ -114,6 +161,10 @@ $(function () {
 
     length_text.innerHTML = length;
     width_text.innerHTML = width;
+
+    lengthTextInput.value = length_text.textContent;
+    widthTextInput.value = width_text.textContent;
+
   };
 });
 

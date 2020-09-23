@@ -12,6 +12,8 @@ $polosa = $_POST['polosa_text--input'];
 $cell = $_POST['cell_text--input'];
 $prutok = $_POST['prutok_text--input'];
 $zn = $_POST['zn_text--input'];
+$length = $_POST['length_text--input'];
+$width = $_POST['width_text--input'];
 $message = $_POST['message'];
 
 
@@ -40,6 +42,8 @@ $mail->Body    = "<strong>ФИО отправителя:</strong> $name <br>
 <strong>Электронный адрес отправителя:</strong> $email <br>
 <strong>Телефон отправителя:</strong> $phone <br>
 <strong>Продукт:</strong> $product <br>
+<strong>Длина:</strong> $length <br>
+<strong>Ширина:</strong> $width <br>
 <strong>Несущая полоса:</strong> $polosa <br>
 <strong>Ячейка:</strong> $cell <br>
 <strong>Связующий пруток:</strong> $prutok <br>

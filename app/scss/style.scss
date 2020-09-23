@@ -35,7 +35,8 @@
 
 
 //----------------POPUP START
-.popup__wrapper {
+.popup__wrapper,
+.popup__callback {
     max-width: 800px;
     height: auto;
     width: 100%;
@@ -252,6 +253,9 @@
     line-height: 40px;
 }
 
+#goods__title-count {
+    margin: 0 auto;
+}
 
 //----------------POPUP END
 
@@ -265,6 +269,12 @@
     }
 }
 
+.header-page {
+    .header__menu-link {
+        color: $red;
+        border-color: $red;
+    }
+}
 
 //---------------------product page END
 
@@ -916,6 +926,14 @@
 }
 
 .footer__contacts {
+    margin-bottom: 50px;
+
+    a {
+        font-size: 16px;
+        color: white;
+        @include osw700;
+    }
+
     p {
         font-size: 16px;
         color: white;
@@ -925,9 +943,10 @@
 
 .footer__bottom {
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    margin-top: 55px;
+
 }
 
 .footer__bottom-text {
@@ -937,6 +956,39 @@
     max-width: 400px;
     text-align: center;
     line-height: 30px;
+}
+
+.footer__item-tel {
+    a {
+        color: white;
+        @include osw700;
+        font-size: 26px;
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    .footer__item-button {
+        margin-top: 15px;
+        border: none;
+        background-color: #fff;
+        color: $red;
+        padding: 15px 25px;
+        @include osw700;
+        font-size: 16px;
+        text-transform: uppercase;
+        margin-bottom: 25px;
+        border: 2px solid transparent;
+        transition: all .4s;
+        cursor: pointer;
+        text-align: center;
+        max-width: 225px;
+
+        &:hover {
+            color: white;
+            background-color: transparent;
+            border: 2px solid white;
+        }
+    }
 }
 
 //--------------- FOOTER END
@@ -1375,7 +1427,6 @@
 
     // .goods__item-wrapper
 
-    &__item-wrapper {}
 
     // .goods__item-title
 
@@ -1704,11 +1755,9 @@
 
     // .production__item-icon
 
-    &__item-icon {}
 
     // .production__item-wrapper
 
-    &__item-wrapper {}
 
     &__item-title {
         font-size: 18px;
@@ -1782,5 +1831,22 @@
     max-width: 500px;
     margin: 20px auto;
 }
+
+
+
+//-------------------------------THANK YOU
+
+.thankyou__title {
+    p {
+        @include osw700;
+        font-size: 26px;
+        padding-top: 200px;
+        margin: 0 auto;
+        color: $greydark;
+        text-align: center;
+    }
+}
+
+
 
 @import "media";
