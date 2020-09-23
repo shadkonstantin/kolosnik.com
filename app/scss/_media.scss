@@ -190,6 +190,16 @@
         cursor: pointer;
     }
 
+    .information__wrapper {
+        justify-content: center;
+        flex-wrap: wrap;
+        max-width: 870px;
+    }
+
+    .information__item {
+        margin-right: 15px;
+    }
+
 }
 
 @media(max-width:965px) {

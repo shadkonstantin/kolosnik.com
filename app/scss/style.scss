@@ -1890,5 +1890,19 @@
 }
 
 
+.gallery-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gallery-item {
+    margin: 10px;
+
+    img {
+        width: 300px;
+    }
+}
+
 
 @import "media";
