@@ -35,6 +35,7 @@
 
 
 //----------------POPUP START
+
 .popup__wrapper,
 .popup__callback {
     max-width: 800px;
@@ -217,6 +218,7 @@
 
 #popup__product {
     padding: 40px;
+    width: 92%;
 
     .popup__box-count {
         display: flex;
@@ -255,6 +257,10 @@
 
 #goods__title-count {
     margin: 0 auto;
+}
+
+.popup__title {
+    text-align: center;
 }
 
 //----------------POPUP END
