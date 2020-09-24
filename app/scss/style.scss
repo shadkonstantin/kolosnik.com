@@ -1904,5 +1904,67 @@
     }
 }
 
+//ABOUT US 
+
+.about {
+    padding-top: 120px;
+}
+
+.about__page-text {
+    @include osw500;
+    font-size: 16px;
+    color: $greydark;
+    line-height: 32px;
+    margin-bottom: 45px;
+}
+
+//Контакты
+
+.page__wrapper {
+    display: flex;
+    padding-bottom: 80px;
+
+    &-contact {
+        margin-right: 65px;
+    }
+
+    &-map {
+        max-width: 600px;
+        width: 100%;
+    }
+}
+
+.contact__item {
+    @include osw700;
+    font-size: 14px;
+    color: $greydark;
+    margin-bottom: 30px;
+
+    div+div {
+        margin-top: 10px;
+    }
+
+    .contact__post,
+    .contact__title {
+        color: $red;
+    }
+
+    .contact__name,
+    .contact__subtitle {
+        font-size: 18px;
+    }
+
+    .contact__email {
+        a {
+            color: $greydark;
+        }
+    }
+
+    .contact__phone {
+        a {
+            color: $greydark;
+        }
+    }
+}
 
 @import "media";

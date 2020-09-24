@@ -50,6 +50,11 @@ $(function () {
     $(".header__top .header__info").slideToggle();
   });
 
+  $(".option-filter").on("click", function () {
+    $(".page-aside").toggleClass('page-aside--toggle');
+  });
+
+
   $(".option-list").on("click", function () {
     $(".goods__wrapper").removeClass("grid");
     $(this).addClass("active");
@@ -169,5 +174,52 @@ $(function () {
 });
 
 
+$(document).ready(function () {
+  function checkWidth() {
+    var windowWidth = $('body').innerWidth(),
+      iconList = $('.option-list');
+    nastil = $(".goods__wrapper");
+    stupen = $("#goods__wrapper--stupen");
+    krepezh = $("#goods-wrapper--krepezh");
 
-//ЗАЯВКИ НА ПОЧТУ
+
+    // лучше сохранять объект в переменную, многократно чтобы не насиловать 
+    // страницу для поиска нужного элемента
+    if (windowWidth < 650) {
+      nastil.removeClass('list');
+      nastil.addClass('grid');
+    }
+    if (windowWidth < 850) {
+      stupen.removeClass('list');
+      stupen.addClass('grid');
+      iconList.addClass('display-none');
+    }
+    if (windowWidth >= 850) {
+      iconList.removeClass('display-none')
+    }
+  }
+
+  checkWidth(); // проверит при загрузке страницы
+
+  $(window).resize(function () {
+    checkWidth(); // проверит при изменении размера окна клиента
+  });
+});
+
+// This will create a single gallery from all elements that have class "gallery-item"
+$('.gallery-item').magnificPopup({
+  type: 'image',
+  gallery: {
+    enabled: true, // set to true to enable gallery
+
+    preload: [0, 2], // read about this option in next Lazy-loading section
+
+    navigateByImgClick: true,
+
+    arrowMarkup: '<button title="%title%" type="button" class="mfp-arrow mfp-arrow-%dir%"></button>', // markup of an arrow button
+
+    tPrev: 'Previous (Left arrow key)', // title for left button
+    tNext: 'Next (Right arrow key)', // title for right button
+    tCounter: '<span class="mfp-counter">%curr% of %total%</span>' // markup of counter
+  }
+});
