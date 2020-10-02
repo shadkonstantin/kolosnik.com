@@ -80,7 +80,7 @@ $(function () {
   });
 
   $('select[id="product"]').styler();
-  $('input[id="popup__checkbox"]').styler();
+  $('input[type="checkbox"]').styler();
   $("select").styler();
 
   $(".header__button-link").magnificPopup({
