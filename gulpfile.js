@@ -1,3 +1,4 @@
+const { task } = require('gulp');
 let gulp = require('gulp'),
   sass = require('gulp-sass'),
   browserSync = require('browser-sync'),
@@ -76,6 +77,14 @@ gulp.task('js', function () {
     }))
 });
 
+
+
+gulp.task('webp', () =>
+  gulp.src('app/img/**')
+    .pipe(webp())
+    .pipe(gulp.dest('dist/img'))
+);
+
 gulp.task('imageMin', function () {
 
   return gulp.src("dist/img/**")
@@ -84,13 +93,6 @@ gulp.task('imageMin', function () {
     }))
     .pipe(gulp.dest('dist/img/'))
 });
-
-
-gulp.task('webp', () =>
-  gulp.src('app/img/**')
-    .pipe(webp())
-    .pipe(gulp.dest('dist/img'))
-);
 
 
 gulp.task('browser-sync', function () {
