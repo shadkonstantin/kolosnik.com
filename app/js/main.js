@@ -223,3 +223,11 @@ $('.gallery-item').magnificPopup({
     tCounter: '<span class="mfp-counter">%curr% of %total%</span>' // markup of counter
   }
 });
+
+
+//1 пример
+$(function () {
+  $("#popup__phone").mask("8(999) 999-9999");
+});
+
+
