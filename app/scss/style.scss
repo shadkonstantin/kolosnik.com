@@ -136,7 +136,8 @@
                 color: $red;
             }
         }
-        .popup__checkbox{
+
+        .popup__checkbox {
             margin-right: 20px;
         }
 
@@ -304,6 +305,9 @@
 //---------------------product page END
 
 //--------------- HEADER START
+
+
+
 .header__menu-btn {
     width: 30px;
     display: none;
@@ -410,7 +414,7 @@
 
 
 .header__title {
-    padding-top: 240px;
+    padding-top: 20%;
 
     h1 {
         font-size: 72px;
@@ -1971,8 +1975,9 @@
     }
 }
 
-input:focus::-webkit-input-placeholder,textarea:focus::-webkit-input-placeholder {
-color:transparent!important;
+input:focus::-webkit-input-placeholder,
+textarea:focus::-webkit-input-placeholder {
+    color: transparent !important;
 }
 
 @import "media";

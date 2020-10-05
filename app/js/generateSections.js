@@ -1,5 +1,5 @@
 const generateHeaderPage = () => {
-    const headerPage = `
+  const headerPage = `
     <header class="header-page">
     <div class="header__top">
         <div class="header__logo">
@@ -48,11 +48,11 @@ const generateHeaderPage = () => {
     </div>
 </header>
 `;
-    document.body.insertAdjacentHTML('afterbegin', headerPage);
+  document.body.insertAdjacentHTML('afterbegin', headerPage);
 }
 const generateFooterPage = () => {
-    const footerPage = `
-    <footer class="footer">
+  const footerPage = `
+  <footer class="footer">
     <div class="container">
       <div class="footer__wrapper">
         <div class="footer__top">
@@ -61,10 +61,14 @@ const generateFooterPage = () => {
               Частые вопросы?
             </div>
             <ul class="footer__list">
-              <li class="footer__list-item"><a href="#" class="footer__list-link">Где вы находитесь?</a></li>
-              <li class="footer__list-item"><a href="#" class="footer__list-link">Что такое несущая полоса?</a></li>
-              <li class="footer__list-item"><a href="#" class="footer__list-link">Как составить заявку?</a></li>
-              <li class="footer__list-item"><a href="#" class="footer__list-link">Какой срок изготовления?</a></li>
+              <li class="footer__list-item"><a href="./contacts.html" class="footer__list-link">Где вы находитесь?</a>
+              </li>
+              <li class="footer__list-item"><a href="#" class="footer__list-link" id="footer__list-link--polosa">Что
+                  такое несущая полоса?</a></li>
+              <li class="footer__list-item"><a href="#" class="footer__list-link" id="footer__list-link--request">Как
+                  составить заявку?</a></li>
+              <li class="footer__list-item"><a href="#" class="footer__list-link" id="footer__list-link--period">Какой
+                  срок изготовления?</a></li>
             </ul>
           </div>
           <div class="footer__item">
@@ -73,11 +77,14 @@ const generateFooterPage = () => {
             </div>
             <ul class="footer__list">
               <li class="footer__list-item"><a href="#" class="footer__list-link">Главная</a></li>
-              <li class="footer__list-item"><a href="#" class="footer__list-link">Как мы производим настил?</a></li>
-              <li class="footer__list-item"><a href="#" class="footer__list-link">Фотографии выполненных работ?</a></li>
-              <li class="footer__list-item"><a href="#" class="footer__list-link">Уставные документы?</a></li>
-              <li class="footer__list-item"><a href="#" class="footer__list-link">О нашей компании</a></li>
-              <li class="footer__list-item"><a href="#" class="footer__list-link">Как с нами связаться?</a></li>
+              <li class="footer__list-item"><a href="./proizvodstvo.html" class="footer__list-link">Как мы производим
+                  настил?</a></li>
+              <li class="footer__list-item"><a href="./gallery.html" class="footer__list-link">Фотографии выполненных
+                  работ?</a></li>
+              <li class="footer__list-item"><a href="./info.html" class="footer__list-link">Уставные документы?</a></li>
+              <li class="footer__list-item"><a href="./aboutUs.html" class="footer__list-link">О нашей компании</a></li>
+              <li class="footer__list-item"><a href="./contacts.html" class="footer__list-link">Как с нами
+                  связаться?</a></li>
               <li class="footer__list-item"><a href="#" class="footer__list-link">Работа в нашей компании</a></li>
             </ul>
           </div>
@@ -119,7 +126,7 @@ const generateFooterPage = () => {
     </div>
   </footer>
   `;
-    document.body.insertAdjacentHTML('beforeend', footerPage);
+  document.body.insertAdjacentHTML('beforeend', footerPage);
 }
 
 generateHeaderPage();

@@ -231,3 +231,42 @@ $(function () {
 });
 
 
+
+const answers = $('.faq__item');
+
+$('#footer__list-link--polosa').on('click', function () {
+  const answerPolosa = $("#faq__answer--polosa");
+  destinationPolosa = answerPolosa.offset().top - 300;
+  answers.removeClass('active');
+  answerPolosa.addClass('active');
+  //Так как шапка на сайте фиксированная, то вычтем ее высоту!
+  $('html, body').animate({
+    scrollTop: destinationPolosa
+  }, 1100);
+  return false;
+});
+
+
+$('#footer__list-link--request').on('click', function () {
+  const answerRequest = $("#faq__answer--request");
+  destinationRequest = answerRequest.offset().top - 300;
+  answers.removeClass('active');
+  answerRequest.addClass('active');
+  //Так как шапка на сайте фиксированная, то вычтем ее высоту!
+  $('html, body').animate({
+    scrollTop: destinationRequest
+  }, 1100);
+  return false;
+});
+
+$('#footer__list-link--period').on('click', function () {
+  const answerPeriod = $("#faq__answer--period");
+  destinationPeriod = answerPeriod.offset().top - 300;
+  answers.removeClass('active');
+  answerPeriod.addClass('active');
+  //Так как шапка на сайте фиксированная, то вычтем ее высоту!
+  $('html, body').animate({
+    scrollTop: destinationPeriod
+  }, 1100);
+  return false;
+});
