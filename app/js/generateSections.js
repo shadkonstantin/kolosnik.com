@@ -25,7 +25,7 @@ const generateHeaderPage = () => {
                         class="header__menu-link">Проектировщикам</a>
                 </li>
                 <li class="header__menu-item"><a href="#" class="header__menu-link">О компании</a></li>
-                <li class="header__menu-item"><a href="#" class="header__menu-link">Контакты</a></li>
+                <li class="header__menu-item"><a href="./contacts.html" class="header__menu-link">Контакты</a></li>
                 <li class="header__menu-item"><a href="#" class="header__menu-link">Вакансии</a></li>
             </ul>
         </nav>
