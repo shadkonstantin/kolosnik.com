@@ -18,13 +18,13 @@ const generateHeaderPage = () => {
                 <li class="header__menu-item"><a href="./proizvodstvo.html"
                         class="header__menu-link">Производство</a>
                 </li>
-                <li class="header__menu-item"><a href="#" class="header__menu-link">Фотогалерея</a></li>
+                <li class="header__menu-item"><a href="./gallery.html" class="header__menu-link">Фотогалерея</a></li>
                 <li class="header__menu-item"><a href="./product.html"
                         class="header__menu-link">Продукция</a></li>
                 <li class="header__menu-item"><a href="./info.html"
                         class="header__menu-link">Проектировщикам</a>
                 </li>
-                <li class="header__menu-item"><a href="#" class="header__menu-link">О компании</a></li>
+                <li class="header__menu-item"><a href="./aboutUs.html" class="header__menu-link">О компании</a></li>
                 <li class="header__menu-item"><a href="./contacts.html" class="header__menu-link">Контакты</a></li>
                 <li class="header__menu-item"><a href="#" class="header__menu-link">Вакансии</a></li>
             </ul>
@@ -63,11 +63,28 @@ const generateFooterPage = () => {
             <ul class="footer__list">
               <li class="footer__list-item"><a href="./contacts.html" class="footer__list-link">Где вы находитесь?</a>
               </li>
-              <li class="footer__list-item"><a href="#" class="footer__list-link" id="footer__list-link--polosa">Что
+              <li class="footer__list-item">
+              <p class="footer-text__hidden">
+              Несущая полоса — это стальная полоса, поставленная на ребро и воспринимающая всю нагрузку. Несколько
+              параллельных несущих полос, сваренных между собой связующим прутком и называется — сварной настил.
+              </p>
+              <a href=".popup__footer" class="footer__list-link--popup" id="footer__list-link--polosa">Что
                   такое несущая полоса?</a></li>
-              <li class="footer__list-item"><a href="#" class="footer__list-link" id="footer__list-link--request">Как
+              <li class="footer__list-item">
+              <p class="footer-text__hidden">
+              В заявке обязательно должны быть указаны основные характеристики сварного настила или ступени такие как:
+              размер несущей полосы (30*3, 30*2 и т. д.), размер ячейки ( 34,3 * 38,1).
+              Указать габаритные размеры настила и ступени, а также их количество, необходимо ли горячее цинкование. Если
+              
+              у вас есть готовые чертежи КМД, вы можете отправить их нам вместе с заявкой на <a class="link-email__foter" href="mailto:kolosnik@kolosnik.com">kolosnik@kolosnik.com</a>. 
+              </p>
+              <a href=".popup__footer" class="footer__list-link--popup" id="footer__list-link--request">Как
                   составить заявку?</a></li>
-              <li class="footer__list-item"><a href="#" class="footer__list-link" id="footer__list-link--period">Какой
+              <li class="footer__list-item">
+              <p class="footer-text__hidden">
+              Средний срок изготовления в оцинкованном виде 3 недели, без цинкования 2 недели.
+              </p>
+              <a href=".popup__footer" class="footer__list-link--popup" id="footer__list-link--period">Какой
                   срок изготовления?</a></li>
             </ul>
           </div>
@@ -76,7 +93,7 @@ const generateFooterPage = () => {
               Навигация
             </div>
             <ul class="footer__list">
-              <li class="footer__list-item"><a href="#" class="footer__list-link">Главная</a></li>
+              <li class="footer__list-item"><a href="./index.html" class="footer__list-link">Главная</a></li>
               <li class="footer__list-item"><a href="./proizvodstvo.html" class="footer__list-link">Как мы производим
                   настил?</a></li>
               <li class="footer__list-item"><a href="./gallery.html" class="footer__list-link">Фотографии выполненных
@@ -85,7 +102,7 @@ const generateFooterPage = () => {
               <li class="footer__list-item"><a href="./aboutUs.html" class="footer__list-link">О нашей компании</a></li>
               <li class="footer__list-item"><a href="./contacts.html" class="footer__list-link">Как с нами
                   связаться?</a></li>
-              <li class="footer__list-item"><a href="#" class="footer__list-link">Работа в нашей компании</a></li>
+              <li class="footer__list-item"><a href="./vacansy.html" class="footer__list-link">Работа в нашей компании</a></li>
             </ul>
           </div>
 

@@ -1,5 +1,5 @@
 const generatePopupCallback = () => {
-    const popup = `  <div class="popup__callback mfp-hide">
+  const popup = `  <div class="popup__callback mfp-hide">
     <div class="popup__title">
       заказать звонок
     </div>
@@ -15,11 +15,11 @@ const generatePopupCallback = () => {
       </form>
     </div>
   </div>`;
-    document.body.insertAdjacentHTML('beforeend', popup);
+  document.body.insertAdjacentHTML('beforeend', popup);
 }
 
 const generatePopupMain = () => {
-    const popup = `
+  const popup = `
     <div class="popup__wrapper mfp-hide">
     <div class="popup__title">
       заказать продукт
@@ -47,9 +47,24 @@ const generatePopupMain = () => {
     </div>
   </div>
   `;
-    document.body.insertAdjacentHTML('beforeend', popup);
+  document.body.insertAdjacentHTML('beforeend', popup);
+}
+
+const generatePopupFooter = () => {
+  const popup = `<div class="popup__footer mfp-hide">
+  <div class="popup__title">
+
+  </div>
+  <div class="popup__inner-footer">
+    <div class="popup__text">
+      
+    </div>
+  </div>
+</div>`;
+  document.body.insertAdjacentHTML('beforeend', popup);
 }
 
 
 generatePopupMain();
 generatePopupCallback();
+generatePopupFooter();

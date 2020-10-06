@@ -82,3 +82,32 @@ button {
     display: none;
 }
 
+.popup__footer{
+    max-width: 800px;
+    width: 100%;
+    height: auto;
+    padding: 30px;
+    background-color: rgba($color: #fff, $alpha: 0.8);
+    margin: 0 auto;
+    & .popup__inner-footer{           
+        @include osw500;
+        color: $greydark;
+    }
+    & .popup__title{
+        @include osw500;
+        color: $greydark;
+        font-size: 20px;
+        margin-bottom: 25px;
+    }
+    & .popup__text{
+        text-align: center;
+        line-height: 30px;
+    }
+}
+.footer-text__hidden{
+    display: none;
+}
+
+.link-email__foter{
+    color: $red;
+}

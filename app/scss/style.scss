@@ -915,7 +915,8 @@
     }
 }
 
-.footer__list-link {
+.footer__list-link,
+.footer__list-link--popup {
     font-size: 16px;
     @include osw700;
     color: white;
@@ -1931,17 +1932,20 @@
 //Контакты
 
 .page__wrapper {
-    display: flex;
     padding-bottom: 80px;
 
     &-contact {
-        margin-right: 65px;
+        display: flex;
+        justify-content: space-between;
     }
 
     &-map {
-        max-width: 600px;
-        width: 100%;
+
     }
+}
+
+.page__content-map{
+    width: 50%;
 }
 
 .contact__item {

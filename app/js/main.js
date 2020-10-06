@@ -83,6 +83,12 @@ $(function () {
   $('input[class="popup__checkbox"]').styler();
   $("select").styler();
 
+
+
+
+
+
+
   $(".header__button-link").magnificPopup({
     type: "inline",
   });
@@ -94,6 +100,29 @@ $(function () {
   $(".footer__item-button").magnificPopup({
     type: "inline",
   });
+
+  $(".footer__list-link--popup").magnificPopup({
+    type: "inline",
+  });
+
+  const footerList = document.querySelector('.footer__list');
+
+
+  const footerListClick = event => {
+    event.preventDefault();
+    const target = event.target;
+    const targetText = event.target.closest(".footer__list-item").firstChild.nextElementSibling;
+    const popupTitle = document.querySelector('.popup__title');
+    const popupText = document.querySelector('.popup__text');
+
+    popupTitle.innerHTML = target.innerHTML;
+    popupText.innerHTML = targetText.innerHTML;
+
+  }
+
+  footerList.addEventListener('click', footerListClick);
+
+
 
   const polosaText = document.getElementById("polosa_text");
   const cellText = document.getElementById("cell_text");
