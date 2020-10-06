@@ -1158,6 +1158,7 @@
                     display: flex;
                     justify-content: space-around;
                     align-items: stretch;
+                    flex-wrap: wrap;
 
                     .answer-img__item {
                         max-width: 300px;
@@ -1585,6 +1586,27 @@
     }
 }
 
+.faq__answer--nastil,
+.faq__answer--stupen{
+    ul{
+        list-style: disc;
+        text-align: left;
+        li{
+            display: block;
+            @include osw700;
+            padding-left: 20px;
+            position: relative;
+            &::before{
+                content: "•";
+                position: absolute;
+                width: 10px;
+                height: 10px;
+                left: 0;
+                top: 1px;
+            }
+        }
+    }
+}
 
 
 //---------------------------------------------------------------- NASTIL PAGE END----------------------------------------------------------//
