@@ -26,11 +26,11 @@
         </div>
         <ul class="header__menu-list">
           <li class="header__menu-item"><a href="./index.html" class="header__menu-link">Главная</a></li>
-          <li class="header__menu-item"><a href="#" class="header__menu-link">Производство</a></li>
+          <li class="header__menu-item"><a href="./proizvodstvo.html" class="header__menu-link">Производство</a></li>
           <li class="header__menu-item"><a href="./gallery.html" class="header__menu-link ">Фотогалерея</a></li>
           <li class="header__menu-item"><a href="./product.html" class="header__menu-link">Продукция</a></li>
-          <li class="header__menu-item"><a href="#" class="header__menu-link">Проектировщикам</a></li>
-          <li class="header__menu-item"><a href="./info.html" class="header__menu-link">О компании</a></li>
+          <li class="header__menu-item"><a href="./info.html" class="header__menu-link">Проектировщикам</a></li>
+          <li class="header__menu-item"><a href="./aboutUs.html" class="header__menu-link">О компании</a></li>
           <li class="header__menu-item"><a href="./contacts.html" class="header__menu-link">Контакты</a></li>
           <li class="header__menu-item"><a href="#" class="header__menu-link">Вакансии</a></li>
         </ul>
@@ -39,9 +39,12 @@
         <div class="icon-envelope"></div>
       </div>
       <div class="header__info">
-        <div class="header__info-item"><a class="header__info-link" href="#">kolosnik@kolosnik.com</a></div>
-        <div class="header__info-item"><a class="header__info-link" href="#">+7 (343) 321 20 49</a></div>
-        <div class="header__info-item"><a class="header__info-link" href="#">г.Екатеринбург, ул.Монтажников,4</a></div>
+        <div class="header__info-item icon-envelope"><a class="header__info-link"
+            href="mailto:kolosnik@kolosnik.com">kolosnik@kolosnik.com</a></div>
+        <div class="header__info-item icon-phone"><a class="header__info-link" href="tel:+73433212049">+7 (343) 321 20
+            49</a></div>
+        <div class="header__info-item"><a class="header__info-link" href="#">г.Екатеринбург,
+            ул.Монтажников,4</a></div>
         <div class="header__info-item"><a class="header__info-link" href="#">ПН-ПТ с 8:00 до 16:30</a></div>
       </div>
     </div>
@@ -59,11 +62,32 @@
           <div class="header__button">
             <a class="header__button-link" href=".popup__wrapper">заказать</a>
           </div>
+          <div class="header__answers">
+            <div class="header__answers-item" id="period__answer">
+              Средний срок изготовления в оцинкованном виде 3 недели, без цинкования 2 недели.
+            </div>
+            <div class="header__answers-item" id="order__answer">
+              В заявке обязательно должны быть указаны основные характеристики сварного настила или ступени такие как:
+              размер несущей полосы (30*3, 30*2 и т. д.), размер ячейки ( 34,3 * 38,1).
+              Указать габаритные размеры настила и ступени, а также их количество, необходимо ли горячее цинкование.
+              Если
+              у вас есть готовые чертежи КМД, вы можете отправить их нам вместе с заявкой на e-mail.
+            </div>
+            <div class="header__answers-item" id="contacts__answer">
+              Вы можете с нами связаться по телефону <a href="tel:+73433212049">+7 (343) 321 20 49</a>,
+              либо напишите нам на <a href="mailto:kolosnik@kolosnik.com">kolosnik@kolosnik.com</a>
+
+            </div>
+            <div class="header__answers-item" id="polosa__answer">
+              Несущая полоса — это стальная полоса, поставленная на ребро и воспринимающая всю нагрузку. Несколько
+              параллельных несущих полос, сваренных между собой связующим прутком и называется — сварной настил.
+            </div>
+          </div>
           <div class="header__questions">
-            <a href="#" class="header__questions-item">какой срок изготовления?</a>
-            <a href="#" class="header__questions-item">как оформить заявку?</a>
-            <a href="#" class="header__questions-item">как с нами связаться?</a>
-            <a href="#" class="header__questions-item">что такое несущая полоса?</a>
+            <a href=".popup__header-links" class="header__questions-item" name="period">какой срок изготовления?</a>
+            <a href=".popup__header-links" class="header__questions-item" name="order">как оформить заявку?</a>
+            <a href=".popup__header-links" class="header__questions-item" name="contacts">как с нами связаться?</a>
+            <a href=".popup__header-links" class="header__questions-item" name="polosa">что такое несущая полоса?</a>
           </div>
         </div>
       </div>
@@ -385,6 +409,18 @@
     </div>
   </footer>
   <!-- FOOTER END -->
+
+
+  <div class="popup__header-links mfp-hSide">
+    <div class="popup__header-title">
+
+    </div>
+    <div class="popup__inner-header">
+      <div class="popup__text-header">
+
+      </div>
+    </div>
+  </div>
 
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

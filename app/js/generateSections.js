@@ -34,9 +34,9 @@ const generateHeaderPage = () => {
         </div>
         <div class="header__info">
 
-            <div class="header__info-item"><a class="header__info-link" href="#">kolosnik@kolosnik.com</a>
+            <div class="header__info-item icon-envelope"><a class="header__info-link" href="mailto:kolosnik@kolosnik.com">kolosnik@kolosnik.com</a>
             </div>
-            <div class="header__info-item"><a class="header__info-link" href="#">+7 (343) 321 20
+            <div class="header__info-item icon-phone"><a class="header__info-link" href="tel:+73433212049">+7 (343) 321 20
                     49</a>
             </div>
             <div class="header__info-item"><a class="header__info-link" href="#">г.Екатеринбург,

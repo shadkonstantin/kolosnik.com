@@ -111,3 +111,39 @@ button {
 .link-email__foter{
     color: $red;
 }
+
+.popup__header-links{
+    max-width: 800px;
+    width: 100%;
+    height: auto;
+    padding: 30px;
+    background-color: rgba($color: #fff, $alpha: 0.9);
+    margin: 0 auto;
+    & .popup__inner-header{
+        @include osw500;
+        color: $greydark;
+    }
+
+    & .popup__header-title{
+        @include osw500;
+        color: $greydark;
+        font-size: 16px;
+        text-align: center;
+        margin-bottom: 25px;
+        text-transform: uppercase;
+        
+    }
+}
+.popup__text-header{
+    text-align: center;
+    line-height: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    a{
+        color: $red;
+    }
+}
+.header__answers{
+    display: none;
+
+}

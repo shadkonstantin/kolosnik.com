@@ -105,6 +105,10 @@ $(function () {
     type: "inline",
   });
 
+  $(".header__questions-item").magnificPopup({
+    type: "inline",
+  });
+
   const footerList = document.querySelector('.footer__list');
 
 
@@ -118,7 +122,7 @@ $(function () {
     popupTitle.innerHTML = target.innerHTML;
     popupText.innerHTML = targetText.innerHTML;
 
-  }
+  };
 
   footerList.addEventListener('click', footerListClick);
 
@@ -149,56 +153,59 @@ $(function () {
     btn.addEventListener("click", () => {
       takeActiveProduct(btn);
     });
-  }
+  };
 
   const takeActiveProduct = (currentActive) => {
     title.innerHTML = currentActive.parentElement.parentElement.querySelector(
       ".goods__item-title"
     ).textContent;
     goodsTitle.value = title.textContent;
+    const krepezhURI = document.body.baseURI;
+    if (!krepezhURI.includes('krepezh')) {
+      polosaText.innerHTML = currentActive.parentElement.parentElement.querySelector(
+        ".polosa"
+      ).textContent;
 
-    polosaText.innerHTML = currentActive.parentElement.parentElement.querySelector(
-      ".polosa"
-    ).textContent;
+      cellText.innerHTML = currentActive.parentElement.parentElement.querySelector(
+        ".cell"
+      ).textContent;
+      prutokText.innerHTML = currentActive.parentElement.parentElement.querySelector(
+        ".prutok"
+      ).textContent;
 
-    cellText.innerHTML = currentActive.parentElement.parentElement.querySelector(
-      ".cell"
-    ).textContent;
-    prutokText.innerHTML = currentActive.parentElement.parentElement.querySelector(
-      ".prutok"
-    ).textContent;
+      if (
+        currentActive.parentElement.parentElement.querySelector(
+          ".checkbox__product"
+        ).checked
+      ) {
+        checkbox.innerHTML = "да";
+      } else {
+        checkbox.innerHTML = "нет";
+      }
 
-    if (
-      currentActive.parentElement.parentElement.querySelector(
-        ".checkbox__product"
-      ).checked
-    ) {
-      checkbox.innerHTML = "да";
-    } else {
-      checkbox.innerHTML = "нет";
+      goodsTitle.value = title.textContent;
+      polosaTextInput.value = polosaText.textContent;
+      cellTextInput.value = cellText.textContent;
+      prutokTextInput.value = prutokText.textContent;
+      znTextInput.value = checkbox.textContent;
     }
 
-    goodsTitle.value = title.textContent;
-    polosaTextInput.value = polosaText.textContent;
-    cellTextInput.value = cellText.textContent;
-    prutokTextInput.value = prutokText.textContent;
-    znTextInput.value = checkbox.textContent;
+    const stupenURI = document.body.baseURI;
 
+    if (stupenURI.includes('stupen')) {
+      const length = currentActive.parentElement.parentElement.querySelector(
+        ".stupen__select-length"
+      ).firstChild.value;
+      const width = currentActive.parentElement.parentElement.querySelector(
+        ".stupen__select-width"
+      ).firstChild.value;
 
+      length_text.innerHTML = length;
+      width_text.innerHTML = width;
 
-    const length = currentActive.parentElement.parentElement.querySelector(
-      ".stupen__select-length"
-    ).firstChild.value;
-    const width = currentActive.parentElement.parentElement.querySelector(
-      ".stupen__select-width"
-    ).firstChild.value;
-
-    length_text.innerHTML = length;
-    width_text.innerHTML = width;
-
-    lengthTextInput.value = length_text.textContent;
-    widthTextInput.value = width_text.textContent;
-
+      lengthTextInput.value = length_text.textContent;
+      widthTextInput.value = width_text.textContent;
+    }
   };
 });
 
@@ -299,3 +306,34 @@ $('#footer__list-link--period').on('click', function () {
   }, 1100);
   return false;
 });
+
+
+////////////////////
+
+const headerQuestions = document.querySelector('.header__questions');
+const headerLinksClick = event => {
+  const popupHeaderTitle = document.querySelector('.popup__header-title');
+  const popupHeaderText = document.querySelector('.popup__text-header');
+  event.preventDefault();
+  const target = event.target;
+  popupHeaderTitle.innerHTML = target.innerHTML;
+  const answerText = target.name + '__answer';
+  const resultText = document.getElementById(answerText);
+  popupHeaderText.innerHTML = resultText.innerHTML;
+};
+
+
+const indexURI = document.body.baseURI;
+
+if (indexURI.includes('index')) {
+  headerQuestions.addEventListener('click', headerLinksClick);
+}
+
+
+
+
+
+
+
+
+

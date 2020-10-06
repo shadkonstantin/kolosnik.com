@@ -360,7 +360,11 @@
             color: $greylight;
             @include osw700;
         }
-
+        .header__info-item{
+            &::before{
+                color: $greylight;
+            }
+        }
         .header__info-link {
             color: $greylight;
             @include osw700;
@@ -401,14 +405,22 @@
     @include osw700;
     color: white;
     margin-right: 20px;
+    &-item{
+        &::before{
+            margin-right: 10px;
+            font-size: 20px;
+        }
+    }
 
     &-item+&-item {
         margin-top: 5px;
     }
 
     &-link {
+        @include osw700;
         color: inherit;
         font-size: 16px;
+
     }
 }
 
