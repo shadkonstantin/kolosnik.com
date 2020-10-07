@@ -235,6 +235,12 @@
         width: 50px;
         height: 80px;
     }
+    .page__wrapper-contact{
+        flex-wrap: wrap;
+    }
+    .page__content-map{
+        width: 100%;
+    }
 }
 
 @media(max-width:920px) {
@@ -368,6 +374,9 @@
 @media(max-width:650px) {
     .option-list {
         display: none;
+    }
+    .header__title{
+        padding-top: 30%;
     }
 }
 
@@ -505,6 +514,9 @@
     .breadcrumbs__list li {
         margin-top: 10px;
     }
+    .title__section{
+        font-size: 28px;
+    }
 }
 
 @media(max-width:410px) {
@@ -561,9 +573,7 @@
         padding-right: 45px;
     }
 
-    .header__title {
-        padding-top: 115px;
-    }
+
 }
 
 @media(max-width:1399px) {

@@ -409,6 +409,7 @@
         &::before{
             margin-right: 10px;
             font-size: 20px;
+            color: $greylight;
         }
     }
 
@@ -698,6 +699,7 @@
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
     max-width: 1170px;
     padding: 20px;
+    padding-right: 30px;
     @include osw700;
     color: $greydark;
     font-size: 16px;
@@ -711,7 +713,7 @@
     background: white;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
     max-width: 1170px;
-    padding: 20px 40px;
+    padding: 20px 30px;
     @include osw500;
     color: $greylight;
     font-size: 16px;
@@ -1135,6 +1137,7 @@
                     margin-bottom: 35px;
                     display: flex;
                     align-items: center;
+                    flex-wrap: wrap;
 
                     ul {
                         margin-left: 60px;
@@ -1212,7 +1215,7 @@
 .aside__link {
     color: $greydark;
     font-size: 18px;
-    padding: 20px;
+    padding-left: 20px;
     width: 100%;
 }
 
@@ -1587,7 +1590,8 @@
 }
 
 .faq__answer--nastil,
-.faq__answer--stupen{
+.faq__answer--stupen,
+.faq__answer--proizvodstvo{
     ul{
         list-style: disc;
         text-align: left;
