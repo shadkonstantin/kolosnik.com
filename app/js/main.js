@@ -109,6 +109,29 @@ $(function () {
     type: "inline",
   });
 
+
+
+
+  const headerQuestions = document.querySelector('.header__questions');
+  const headerLinksClick = event => {
+    const popupHeaderTitle = document.querySelector('.popup__header-title');
+    const popupHeaderText = document.querySelector('.popup__text-header');
+    event.preventDefault();
+    const target = event.target;
+    popupHeaderTitle.innerHTML = target.innerHTML;
+    const answerText = target.name + '__answer';
+    const resultText = document.getElementById(answerText);
+    popupHeaderText.innerHTML = resultText.innerHTML;
+  };
+  if (headerQuestions) {
+    headerQuestions.addEventListener('click', headerLinksClick);
+  }
+
+
+
+
+
+
   const footerList = document.querySelector('.footer__list');
 
 
@@ -306,30 +329,6 @@ $('#footer__list-link--period').on('click', function () {
   }, 1100);
   return false;
 });
-
-
-////////////////////
-
-const headerQuestions = document.querySelector('.header__questions');
-const headerLinksClick = event => {
-  const popupHeaderTitle = document.querySelector('.popup__header-title');
-  const popupHeaderText = document.querySelector('.popup__text-header');
-  event.preventDefault();
-  const target = event.target;
-  popupHeaderTitle.innerHTML = target.innerHTML;
-  const answerText = target.name + '__answer';
-  const resultText = document.getElementById(answerText);
-  popupHeaderText.innerHTML = resultText.innerHTML;
-};
-
-
-const indexURI = document.body.baseURI;
-
-if (indexURI.includes('index')) {
-  headerQuestions.addEventListener('click', headerLinksClick);
-}
-
-
 
 
 

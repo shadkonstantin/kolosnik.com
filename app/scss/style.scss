@@ -409,7 +409,7 @@
         &::before{
             margin-right: 10px;
             font-size: 20px;
-            color: $greylight;
+            //color: $greylight;
         }
     }
 
@@ -1113,6 +1113,7 @@
 //----------breadcrumbs END
 
 .page-wrapper {
+    
     .container {
         .faq__wrapper {
             padding-top: 50px;
@@ -1167,7 +1168,7 @@
                         max-width: 300px;
 
                         img {
-                            width: 300px;
+                            width: 100%;
                         }
 
                         p {
@@ -1215,7 +1216,7 @@
 .aside__link {
     color: $greydark;
     font-size: 18px;
-    padding-left: 20px;
+    padding: 20px;
     width: 100%;
 }
 
@@ -1882,6 +1883,7 @@
 
 .information__wrapper {
     align-items: stretch;
+    padding-bottom: 30px;
 }
 
 .information__item-wrapper {
@@ -1950,6 +1952,8 @@
 
     img {
         width: 300px;
+        height: 200px;
+
     }
 }
 

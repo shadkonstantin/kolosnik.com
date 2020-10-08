@@ -5,8 +5,8 @@ const generatePopupCallback = () => {
     </div>
     <div class="popup__inner">
       <form action="mail_callback.php" class="popup__form ajax-contact-form" method="POST">
-        <input type="text" placeholder="Ваше имя" name="name" class="popup__inner-input">
-        <input type="text" placeholder="Ваш телефон" name="phone" class="popup__inner-input">
+        <input type="text" placeholder="Ваше имя" name="name" class="popup__inner-input" >
+        <input type="text" placeholder="Ваш телефон" name="phone" class="popup__inner-input" id="popup__phone">
         <div class="popup__politika">
           <input type="checkbox" name="" class="popup__checkbox" checked>
           <p>отправляя данное сообщение, я соглашаюсь на обработку моих персональных данных</p>
