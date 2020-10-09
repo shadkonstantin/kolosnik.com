@@ -21,12 +21,12 @@ const generateHeaderPage = () => {
                 <li class="header__menu-item"><a href="./gallery.html" class="header__menu-link">Фотогалерея</a></li>
                 <li class="header__menu-item"><a href="./product.html"
                         class="header__menu-link">Продукция</a></li>
-                <li class="header__menu-item"><a href="./info.html"
+                <li class="header__menu-item"><a href="./information.html"
                         class="header__menu-link">Проектировщикам</a>
                 </li>
-                <li class="header__menu-item"><a href="./aboutUs.html" class="header__menu-link">О компании</a></li>
+                <li class="header__menu-item"><a href="./company.html" class="header__menu-link">О компании</a></li>
                 <li class="header__menu-item"><a href="./contacts.html" class="header__menu-link">Контакты</a></li>
-                <li class="header__menu-item"><a href="#" class="header__menu-link">Вакансии</a></li>
+                <li class="header__menu-item"><a href="./vacansy.html" class="header__menu-link">Вакансии</a></li>
             </ul>
         </nav>
         <div class="header__info-icon">
@@ -86,6 +86,8 @@ const generateFooterPage = () => {
               </p>
               <a href=".popup__footer" class="footer__list-link--popup" id="footer__list-link--period">Какой
                   срок изготовления?</a></li>
+                  <li class="footer__list-item">
+                  <a href="./gallery.html" class="footer__list-link--popup" id="footer__list-link--period">Примеры работ</a></li>
             </ul>
           </div>
           <div class="footer__item">
@@ -94,14 +96,10 @@ const generateFooterPage = () => {
             </div>
             <ul class="footer__list">
               <li class="footer__list-item"><a href="./index.html" class="footer__list-link">Главная</a></li>
-              <li class="footer__list-item"><a href="./proizvodstvo.html" class="footer__list-link">Как мы производим
-                  настил?</a></li>
-              <li class="footer__list-item"><a href="./gallery.html" class="footer__list-link">Фотографии выполненных
-                  работ?</a></li>
-              <li class="footer__list-item"><a href="./info.html" class="footer__list-link">Уставные документы?</a></li>
-              <li class="footer__list-item"><a href="./aboutUs.html" class="footer__list-link">О нашей компании</a></li>
-              <li class="footer__list-item"><a href="./contacts.html" class="footer__list-link">Как с нами
-                  связаться?</a></li>
+              <li class="footer__list-item"><a href="./nastil.html" class="footer__list-link">Решетчатый настил</a></li>
+              <li class="footer__list-item"><a href="./stupen.html" class="footer__list-link">Ступени</a></li>
+              <li class="footer__list-item"><a href="./krepezh.html" class="footer__list-link">Крепления</a></li>
+              <li class="footer__list-item"><a href="./information.html" class="footer__list-link">Документы</a></li>
               <li class="footer__list-item"><a href="./vacansy.html" class="footer__list-link">Работа в нашей компании</a></li>
             </ul>
           </div>

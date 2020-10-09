@@ -1929,7 +1929,8 @@
 
 //-------------------------------THANK YOU
 
-.thankyou__title {
+.thankyou__title,
+.vacansy__title {
     p {
         @include osw700;
         font-size: 26px;
@@ -1953,7 +1954,6 @@
     img {
         width: 300px;
         height: 200px;
-
     }
 }
 

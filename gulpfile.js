@@ -130,6 +130,6 @@ gulp.task('watch', function () {
   gulp.watch('app/js/*.js', gulp.parallel('script'))
 });
 
-gulp.task('build', gulp.series('clean', 'export', 'webp', 'imageMin'));
+gulp.task('build', gulp.parallel('clean', 'export', 'webp', 'imageMin'));
 
 gulp.task('default', gulp.parallel('css', 'scss', 'js', 'browser-sync', 'watch'));
